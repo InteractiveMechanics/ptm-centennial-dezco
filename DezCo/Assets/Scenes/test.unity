@@ -144,23 +144,12 @@ MonoBehaviour:
   columns: 20
   rows: 20
   treeCount:
-    minimum: 5
-    maximum: 9
+    minimum: 20
+    maximum: 30
   prompt: {fileID: 100000, guid: 7d7e33a3fbf50824cb6bd6837630c4f3, type: 2}
   groundTiles:
   - {fileID: 100000, guid: dac72f3d0a398ce4185b216633a713cc, type: 2}
   treeTiles:
-  - {fileID: 100000, guid: e2487afae7c3aad46aa039c351eb1149, type: 2}
-  - {fileID: 100000, guid: 8e650b1c6ffaa0940ae7a48c7f6b32e0, type: 2}
-  - {fileID: 100000, guid: 326bcc5d801e9b145982b29c395fc307, type: 2}
-  - {fileID: 100000, guid: 1bb353aab7e479648a2bc21f16516c75, type: 2}
-  - {fileID: 100000, guid: 83b4c0ad25373e041b0a830dcb5bb27c, type: 2}
-  - {fileID: 100000, guid: 06e2c246a59e5084597b583dd2f318b0, type: 2}
-  - {fileID: 100000, guid: e39a4b00b122b1a419d0b2e1b59bf7e0, type: 2}
-  - {fileID: 100000, guid: 5cdcc9f202c16644eaedc6d3620c17f5, type: 2}
-  - {fileID: 100000, guid: bba425dbef9eb864ba14dc0231482e9a, type: 2}
-  - {fileID: 100000, guid: 86fefbf8cda098042bf1494187dd3a35, type: 2}
-  - {fileID: 100000, guid: af0f34cadeb91b747a8975656caf1a49, type: 2}
   - {fileID: 100000, guid: 8036399f104d17a4291bc9c2e8acaa99, type: 2}
   outerWallTiles:
   - {fileID: 100000, guid: 9bf946a7cd6a403428dc5440480b0c67, type: 2}

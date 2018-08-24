@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
-using Assets.UltimateIsometricToolkit.Scripts.Core;
+//using Assets.UltimateIsometricToolkit.Scripts.Core;
+using IsoTools;
 
 
 
@@ -29,35 +30,36 @@ public class BoardManager : MonoBehaviour {
     public GameObject[] outerWallTiles;
 
     private Transform boardHolder;
+    public GameObject board;
+    private IsoWorld isoWorld;
     private List<Vector3> gridPositions = new List<Vector3>();
 
     void InitializeList(){
         gridPositions.Clear();
 
         for (int x = 1; x < columns - 1; x++){
-            for (int z = 1; z < rows - 1; z++)
+            for (int y = 1; y < rows - 1; y++)
             {
-                gridPositions.Add(new Vector3(x, 0f, z));
+                gridPositions.Add(new Vector3(x, y, 0f));
             }
         }
     }
 
     void BoardSetup (){
-        boardHolder = new GameObject("Board").transform;
-
+        boardHolder = board.transform;
 
         for (int x = -1; x < columns+1; x++)
         {
-            for (int z = -1; z < rows+1; z++)
+            for (int y = -1; y < rows+1; y++)
             {
                 GameObject toInstantiate = groundTiles[Random.Range(0, groundTiles.Length)];
 
-                if (x == -1 || x == columns || z == -1 || z == rows)
+                if (x == -1 || x == columns || y == -1 || y == rows)
                     toInstantiate = outerWallTiles[Random.Range (0, outerWallTiles.Length)];
                 
                 GameObject instance = Instantiate(toInstantiate, new Vector3(0f, 0f, 0f), Quaternion.identity) as GameObject;
-                IsoTransform iso = instance.AddComponent<IsoTransform>();
-                iso.Position = new Vector3(x, 0f, z);
+                IsoObject iso = instance.GetComponent<IsoObject>();
+                iso.position = new Vector3(x, y, 0f);
                 instance.transform.SetParent(boardHolder);
             }
         }
@@ -80,16 +82,20 @@ public class BoardManager : MonoBehaviour {
             //Instantiate tileChoice at the position returned by RandomPosition with no change in rotation
             GameObject randomTile = Instantiate(tileChoice, new Vector3(0f, 0f, 0f), Quaternion.identity);
             randomTile.name = "tree" + i;
-            IsoTransform iso = randomTile.AddComponent<IsoTransform>();
-            iso.Position = randomPosition;
+            IsoObject iso = randomTile.GetComponent<IsoObject>();
+            iso.position = randomPosition;
+            randomTile.transform.SetParent(boardHolder);
+            //iso.Size = new Vector3(1, 1, 1);
         }
     }
 
     public void SetupScene(){
         BoardSetup();
         InitializeList();
-        LayoutObjectAtRandom(treeTiles, 3, 3);
-        //LayoutObjectAtRandom(treeTiles, treeCount.minimum, treeCount.maximum);
-        //Instantiate(prompt, new Vector3(columns - 1, rows - 1, 0f), Quaternion.identity);
+        LayoutObjectAtRandom(treeTiles, treeCount.minimum, treeCount.maximum);
+        GameObject gardenTile = Instantiate(prompt, new Vector3(columns/2, rows/2, 0f), Quaternion.identity);
+        IsoObject iso = gardenTile.GetComponent<IsoObject>();
+        iso.position = new Vector3(columns/2, rows/2, 0f);
+        gardenTile.transform.SetParent(boardHolder);
     }
 }
