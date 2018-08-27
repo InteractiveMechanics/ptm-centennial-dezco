@@ -78,7 +78,6 @@ public class BoardManager : MonoBehaviour {
             Vector3 randomPosition = RandomPosition();
             GameObject tileChoice = tileArray[Random.Range(0, tileArray.Length)];
             Debug.Log(tileChoice);
-
             //Instantiate tileChoice at the position returned by RandomPosition with no change in rotation
             GameObject randomTile = Instantiate(tileChoice, new Vector3(0f, 0f, 0f), Quaternion.identity);
             randomTile.name = "tree" + i;
@@ -89,6 +88,11 @@ public class BoardManager : MonoBehaviour {
         }
     }
 
+    void DestroyAroundPos(int x, int y, int radius)
+    {
+         
+    }
+
     public void SetupScene(){
         BoardSetup();
         InitializeList();
@@ -97,5 +101,9 @@ public class BoardManager : MonoBehaviour {
         IsoObject iso = gardenTile.GetComponent<IsoObject>();
         iso.position = new Vector3(columns/2, rows/2, 0f);
         gardenTile.transform.SetParent(boardHolder);
+
+        //check if other tiles are in this position
+
+
     }
 }
