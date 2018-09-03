@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour {
 	}
 
     void InitGame(){
-        boardScript.SetupScene();
+        //boardScript.SetupScene();
+        boardScript.Populate();
     }
 
     // Update is called once per frame

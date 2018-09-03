@@ -28,6 +28,8 @@ public class BoardManager : MonoBehaviour {
     public GameObject[] groundTiles;
     public GameObject[] treeTiles;
     public GameObject[] outerWallTiles;
+    public GameObject Person;
+    public int population;
 
     private Transform boardHolder;
     public GameObject board;
@@ -46,7 +48,8 @@ public class BoardManager : MonoBehaviour {
     }
 
     void BoardSetup (){
-        boardHolder = board.transform;
+        // in setup func
+        //boardHolder = board.transform;
 
         for (int x = -1; x < columns+1; x++)
         {
@@ -65,7 +68,7 @@ public class BoardManager : MonoBehaviour {
         }
     }
 
-    Vector3 RandomPosition(){
+    Vector3 RandomGridPosition(){
         int randomIndex = Random.Range(0, gridPositions.Count);
         Vector3 randomPosition = gridPositions[randomIndex];
         return randomPosition;
@@ -75,9 +78,9 @@ public class BoardManager : MonoBehaviour {
         int objectCount = Random.Range(minimum, maximum + 1);
 
         for (int i = 0; i< objectCount; i++){
-            Vector3 randomPosition = RandomPosition();
+            Vector3 randomPosition = RandomGridPosition();
             GameObject tileChoice = tileArray[Random.Range(0, tileArray.Length)];
-            Debug.Log(tileChoice);
+            //Debug.Log(tileChoice);
             //Instantiate tileChoice at the position returned by RandomPosition with no change in rotation
             GameObject randomTile = Instantiate(tileChoice, new Vector3(0f, 0f, 0f), Quaternion.identity);
             randomTile.name = "tree" + i;
@@ -88,19 +91,38 @@ public class BoardManager : MonoBehaviour {
         }
     }
 
-    void DestroyAroundPos(int x, int y, int radius)
+    Vector3 RandomPosition()
     {
-         
+        float randomX = Random.Range(0, columns);
+        float randomY = Random.Range(0, rows);
+        Vector3 randomPosition = new Vector3(randomX, randomY, 0f);
+        return randomPosition;
     }
 
+    public void Populate()
+    {
+        boardHolder = board.transform;
+        for (int i = 0; i < population; i++)
+        {
+            Vector3 randomPosition = RandomPosition();
+            GameObject randomPerson = Instantiate(Person, new Vector3(0f, 0f, 0f), Quaternion.identity);
+            IsoObject iso = randomPerson.GetComponent<IsoObject>();
+            iso.position = randomPosition;
+            randomPerson.transform.SetParent(boardHolder);
+        }
+    }
+
+
     public void SetupScene(){
-        BoardSetup();
-        InitializeList();
-        LayoutObjectAtRandom(treeTiles, treeCount.minimum, treeCount.maximum);
-        GameObject gardenTile = Instantiate(prompt, new Vector3(columns/2, rows/2, 0f), Quaternion.identity);
-        IsoObject iso = gardenTile.GetComponent<IsoObject>();
-        iso.position = new Vector3(columns/2, rows/2, 0f);
-        gardenTile.transform.SetParent(boardHolder);
+        boardHolder = board.transform;
+        //BoardSetup();
+        //InitializeList();
+        //LayoutObjectAtRandom(treeTiles, treeCount.minimum, treeCount.maximum);
+        //GameObject gardenTile = Instantiate(prompt, new Vector3(columns/2, rows/2, 0f), Quaternion.identity);
+        //IsoObject iso = gardenTile.GetComponent<IsoObject>();
+        //iso.position = new Vector3(columns/2, rows/2, 0f);
+        //gardenTile.transform.SetParent(boardHolder);
+        Populate();
 
         //check if other tiles are in this position
 
