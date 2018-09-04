@@ -5,6 +5,7 @@ using System;
 using Random = UnityEngine.Random;
 //using Assets.UltimateIsometricToolkit.Scripts.Core;
 using IsoTools;
+using IsoTools.Internal;
 
 
 
@@ -24,18 +25,21 @@ public class BoardManager : MonoBehaviour {
     public int columns = 20;
     public int rows = 20;
     public Count treeCount = new Count(5, 9);
-    public GameObject prompt;
     public GameObject[] groundTiles;
     public GameObject[] treeTiles;
     public GameObject[] outerWallTiles;
     public GameObject Person;
+    public GameObject Prompt;
     public int population;
 
     private Transform boardHolder;
+    private Transform canvas;
     public GameObject board;
     private IsoWorld isoWorld;
     private List<Vector3> gridPositions = new List<Vector3>();
     private Person[] persons;
+    private PromptLocation[] promptLocations;
+    public int promptOffset;
 
     void InitializeList(){
         gridPositions.Clear();
@@ -121,8 +125,8 @@ public class BoardManager : MonoBehaviour {
 
     public void UpdatePopulation()
     {
-        persons = FindObjectsOfType<Person>();;
-        Debug.Log(persons.Length);
+        persons = FindObjectsOfType<Person>();
+        //Debug.Log(persons.Length);
         if (persons.Length < population) {
             InstantiatePerson();
         } else if ( persons.Length > population)
@@ -131,9 +135,29 @@ public class BoardManager : MonoBehaviour {
         }    
     }
 
+    public void ActivateRandomPrompt()
+    {
+        promptLocations = FindObjectsOfType<PromptLocation>();
+        PromptLocation randomLocation = promptLocations[Random.Range(0, promptLocations.Length-1)];
+        IsoObject iso = randomLocation.GetComponent<IsoObject>();
+        Color tmp = randomLocation.GetComponentInChildren<SpriteRenderer>().color;
+        tmp.a = 1f;
+        randomLocation.GetComponentInChildren<SpriteRenderer>().color = tmp;
+        Vector2 promptLocation2D = isoWorld.IsoToScreen(iso.position);
+        GameObject promptModal = Instantiate(Prompt, promptLocation2D, Quaternion.identity);
+        promptModal.transform.SetParent(canvas, false);
+        promptLocation2D = new Vector2(promptLocation2D.x, promptLocation2D.y + promptOffset);
+        promptModal.transform.position = promptLocation2D;
+
+
+    }
+
 
     public void SetupScene(){
+        // init steps
         boardHolder = board.transform;
+        isoWorld = FindObjectOfType<IsoWorld>();
+        canvas = FindObjectOfType<Canvas>().transform;        
         //BoardSetup();
         //InitializeList();
         //LayoutObjectAtRandom(treeTiles, treeCount.minimum, treeCount.maximum);
@@ -141,7 +165,9 @@ public class BoardManager : MonoBehaviour {
         //IsoObject iso = gardenTile.GetComponent<IsoObject>();
         //iso.position = new Vector3(columns/2, rows/2, 0f);
         //gardenTile.transform.SetParent(boardHolder);
+        ActivateRandomPrompt();
         Populate();
+
 
         //check if other tiles are in this position
 
