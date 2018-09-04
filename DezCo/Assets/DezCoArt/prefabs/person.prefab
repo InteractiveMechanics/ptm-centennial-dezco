@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114444792377310312}
   - component: {fileID: 114496641684591520}
   - component: {fileID: 114476053951697230}
+  - component: {fileID: 114905256223013350}
   m_Layer: 0
   m_Name: person
   m_TagString: Untagged
@@ -122,6 +123,18 @@ MonoBehaviour:
   _isTrigger: 0
   _size: {x: 0.1, y: 0.1, z: 0.25}
   _offset: {x: 0.05, y: 0.05, z: 0.125}
+--- !u!114 &114905256223013350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1421705001409862}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47161e482798d4f388299adfe714734f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 10
 --- !u!212 &212239301946830332
 SpriteRenderer:
   m_ObjectHideFlags: 1

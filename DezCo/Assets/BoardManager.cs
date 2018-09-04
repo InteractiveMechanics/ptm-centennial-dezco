@@ -35,6 +35,7 @@ public class BoardManager : MonoBehaviour {
     public GameObject board;
     private IsoWorld isoWorld;
     private List<Vector3> gridPositions = new List<Vector3>();
+    private Person[] persons;
 
     void InitializeList(){
         gridPositions.Clear();
@@ -93,23 +94,41 @@ public class BoardManager : MonoBehaviour {
 
     Vector3 RandomPosition()
     {
-        float randomX = Random.Range(0, columns);
-        float randomY = Random.Range(0, rows);
+        float randomX = Random.Range(0f, (float)columns);
+        float randomY = Random.Range(0f, (float)rows);
         Vector3 randomPosition = new Vector3(randomX, randomY, 0f);
         return randomPosition;
     }
 
     public void Populate()
     {
-        boardHolder = board.transform;
+        //boardHolder = board.transform;
         for (int i = 0; i < population; i++)
         {
-            Vector3 randomPosition = RandomPosition();
-            GameObject randomPerson = Instantiate(Person, new Vector3(0f, 0f, 0f), Quaternion.identity);
-            IsoObject iso = randomPerson.GetComponent<IsoObject>();
-            iso.position = randomPosition;
-            randomPerson.transform.SetParent(boardHolder);
+            InstantiatePerson();
         }
+    }
+
+    public void InstantiatePerson()
+    {
+        boardHolder = board.transform;
+        Vector3 randomPosition = RandomPosition();
+        GameObject randomPerson = Instantiate(Person, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        IsoObject iso = randomPerson.GetComponent<IsoObject>();
+        iso.position = randomPosition;
+        randomPerson.transform.SetParent(boardHolder);
+    }
+
+    public void UpdatePopulation()
+    {
+        persons = FindObjectsOfType<Person>();;
+        Debug.Log(persons.Length);
+        if (persons.Length < population) {
+            InstantiatePerson();
+        } else if ( persons.Length > population)
+        {
+            Destroy(persons[persons.Length - 1].gameObject);
+        }    
     }
 
 
