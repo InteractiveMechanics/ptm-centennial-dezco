@@ -25,12 +25,23 @@ public class TouchInput : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        if (Input.GetMouseButtonDown(0)){
-            puckLocation3D = isoWorld.ScreenToIso(mousePosition, 0f);
-        } 
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        {
+            // Get movement of the finger since last frame
+            Vector2 touchDeltaPosition = Input.GetTouch(0).position;
+
+            puckLocation3D = isoWorld.ScreenToIso(touchDeltaPosition, 0f);
+            // Move object across XY plane
+            //transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
+        }
+
+        //mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        //if (Input.GetMouseButtonDown(0)){
+        //    puckLocation3D = isoWorld.ScreenToIso(mousePosition, 0f);
+        //} 
         iso.position = puckLocation3D;
-        Debug.Log(puckLocation3D+", "+Input.mousePosition.x+", "+Input.mousePosition.y);
+        //Debug.Log(puckLocation3D+", "+Input.mousePosition.x+", "+Input.mousePosition.y);
             
 	}
 }
