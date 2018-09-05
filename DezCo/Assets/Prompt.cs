@@ -6,7 +6,7 @@ public class Prompt : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        this.gameObject.GetComponent<AudioSource>().Play();
 	}
 	
 	// Update is called once per frame

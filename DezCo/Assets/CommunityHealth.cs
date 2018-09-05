@@ -2,16 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using IsoTools;
 
 public class CommunityHealth : MonoBehaviour {
     public int CurrentHappiness { get; set; }
     public int CurrentEnvironment { get; set; }
     public int CurrentBudget { get; set; }
     public int MaxValue { get; set; }
+    public int EnvironmentThreshold { get; set; }
+    public int BudgetThreshold { get; set; }
 
     public Slider happinessbar;
     public Slider environmentbar;
     public Slider budgetbar;
+    public GameObject Pothole;
+    public GameObject board;
+
 
 
 
@@ -24,6 +30,7 @@ public class CommunityHealth : MonoBehaviour {
         CurrentBudget = MaxValue;
 
         happinessbar.maxValue = MaxValue;
+
         environmentbar.maxValue = MaxValue;
         budgetbar.maxValue = MaxValue;
         happinessbar.value = MaxValue;
@@ -36,6 +43,7 @@ public class CommunityHealth : MonoBehaviour {
     void Update()
     {
         CalculateHealth();
+
 
         //add trash
         //update trees
@@ -54,6 +62,8 @@ public class CommunityHealth : MonoBehaviour {
 
     public void CalculateHealth(){
 
+        int PreviousHappiness = CurrentHappiness;
+
         CurrentHappiness = MaxValue;
         CurrentEnvironment = MaxValue;
         CurrentBudget = MaxValue;
@@ -68,9 +78,26 @@ public class CommunityHealth : MonoBehaviour {
             CurrentBudget += healthObject.budget; //adjust happiness from base value
 
         }
+
+        if (CurrentEnvironment < EnvironmentThreshold || CurrentBudget < BudgetThreshold)
+        {
+            PreviousHappiness --;
+            CurrentHappiness = PreviousHappiness;
+        }
+
         happinessbar.value = CurrentHappiness; //change sliders
         environmentbar.value = CurrentEnvironment;
         budgetbar.value = CurrentBudget;
+    }
+
+    public void ShowDisrepair(){
+        Transform boardHolder = board.transform;
+        if (CurrentBudget < BudgetThreshold) {
+            GameObject pothole = Instantiate(Pothole, new Vector3(0f, 0f, 0f), Quaternion.identity);
+            IsoObject iso = pothole.GetComponent<IsoObject>();
+            iso.position = new Vector3(21f,24f,0f);
+            pothole.transform.SetParent(boardHolder);
+        }
     }
 
 
