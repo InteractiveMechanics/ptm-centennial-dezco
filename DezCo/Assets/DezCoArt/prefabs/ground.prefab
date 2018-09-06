@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4949819952144796}
   - component: {fileID: 212546631550290886}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: groundSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,7 +50,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1033450911501292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.198816, y: -3.0051527, z: -75.226364}
+  m_LocalPosition: {x: -1920, y: 1080, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4949819952144796}
@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1809138047306370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4596215595894318}
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _size: {x: 1, y: 1, z: 0}
-  _position: {x: 1.6701, y: -1, z: 0}
+  _position: {x: 0, y: 0, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
 --- !u!212 &212546631550290886

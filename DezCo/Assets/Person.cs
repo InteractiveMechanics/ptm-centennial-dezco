@@ -14,8 +14,7 @@ public class Person : MonoBehaviour {
     //persons below will most likely have to be individual gameobjects so each 
     //person animation spritesheet is associated with each individual.
     public Sprite[] persons;
-    private SpriteRenderer renderer;
-    public int number;
+    private SpriteRenderer personRenderer;
 
 
     // Use this for initialization
@@ -23,14 +22,14 @@ public class Person : MonoBehaviour {
     {
         game = FindObjectOfType<GameManager>();
         health = game.GetComponent<CommunityHealth>();
-        renderer = transform.Find("sprite").GetComponent<SpriteRenderer>();
+        personRenderer = gameObject.transform.Find("personSprite").GetComponent<SpriteRenderer>();
         RandomPerson();
     }
 
     void RandomPerson()
     {
         Debug.Log("random person");
-        renderer.sprite = persons[Random.Range(0, persons.Length)];
+        personRenderer.sprite = persons[Random.Range(0, persons.Length)];
     }
 
     // Update is called once per frame

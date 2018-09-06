@@ -106,6 +106,7 @@ public class BoardManager : MonoBehaviour {
 
     public void Populate()
     {
+        Debug.Log("populating");
         //boardHolder = board.transform;
         for (int i = 0; i < population; i++)
         {
@@ -138,16 +139,19 @@ public class BoardManager : MonoBehaviour {
     public void ActivateRandomPrompt()
     {
         promptLocations = FindObjectsOfType<PromptLocation>();
-        PromptLocation randomLocation = promptLocations[Random.Range(0, promptLocations.Length-1)];
-        IsoObject iso = randomLocation.GetComponent<IsoObject>();
-        Color tmp = randomLocation.GetComponentInChildren<SpriteRenderer>().color;
-        tmp.a = 1f;
-        randomLocation.GetComponentInChildren<SpriteRenderer>().color = tmp;
-        Vector2 promptLocation2D = isoWorld.IsoToScreen(iso.position);
-        GameObject promptModal = Instantiate(Prompt, promptLocation2D, Quaternion.identity);
-        promptModal.transform.SetParent(canvas, false);
-        promptLocation2D = new Vector2(promptLocation2D.x, promptLocation2D.y + promptOffset);
-        promptModal.transform.position = promptLocation2D;
+        if (promptLocations.Length > 0){
+            PromptLocation randomLocation = promptLocations[Random.Range(0, promptLocations.Length - 1)];
+            IsoObject iso = randomLocation.GetComponent<IsoObject>();
+            Color tmp = randomLocation.GetComponentInChildren<SpriteRenderer>().color;
+            tmp.a = 1f;
+            randomLocation.GetComponentInChildren<SpriteRenderer>().color = tmp;
+            Vector2 promptLocation2D = isoWorld.IsoToScreen(iso.position);
+            GameObject promptModal = Instantiate(Prompt, promptLocation2D, Quaternion.identity);
+            promptModal.transform.SetParent(canvas, false);
+            promptLocation2D = new Vector2(promptLocation2D.x, promptLocation2D.y + promptOffset);
+            promptModal.transform.position = promptLocation2D;
+        }
+
 
 
     }
@@ -157,16 +161,10 @@ public class BoardManager : MonoBehaviour {
         // init steps
         boardHolder = board.transform;
         isoWorld = FindObjectOfType<IsoWorld>();
-        canvas = FindObjectOfType<Canvas>().transform;        
-        //BoardSetup();
-        //InitializeList();
-        //LayoutObjectAtRandom(treeTiles, treeCount.minimum, treeCount.maximum);
-        //GameObject gardenTile = Instantiate(prompt, new Vector3(columns/2, rows/2, 0f), Quaternion.identity);
-        //IsoObject iso = gardenTile.GetComponent<IsoObject>();
-        //iso.position = new Vector3(columns/2, rows/2, 0f);
-        //gardenTile.transform.SetParent(boardHolder);
-        ActivateRandomPrompt();
+        canvas = FindObjectOfType<Canvas>().transform;   
         Populate();
+        ActivateRandomPrompt();
+
 
 
         //check if other tiles are in this position

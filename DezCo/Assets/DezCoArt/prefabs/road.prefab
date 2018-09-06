@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4712559100543084}
   - component: {fileID: 114553619724461454}
   m_Layer: 0
-  m_Name: tile-0z
+  m_Name: road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _size: {x: 1, y: 1, z: 0.1}
-  _position: {x: 24, y: 9, z: 0}
+  _position: {x: 0, y: 0, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
 --- !u!212 &212706159932401910

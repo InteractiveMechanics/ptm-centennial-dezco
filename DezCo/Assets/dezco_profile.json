@@ -1,0 +1,90 @@
+{
+  "Config": {
+    "Name": "DEZCO",
+    "SensitivityMultiplier": 1.0,
+    "Recovery": {
+      "Timeout": 200,
+      "TangibleDistance": 50.0,
+      "PointDistance": 50.0
+    },
+    "Smoothing": {
+      "PositionHistory": 1,
+      "RotationHistory": 10
+    },
+    "Pending3PointMatchDelay": 0
+  },
+  "Patterns": [
+    {
+      "PatternId": 1,
+      "Name": "tangible_2",
+      "KeepAlivePoints": 2,
+      "Points": [
+        {
+          "X": 2.333252,
+          "Y": -90.666626
+        },
+        {
+          "X": 76.33325,
+          "Y": 52.333374
+        },
+        {
+          "X": -78.66675,
+          "Y": 38.333374
+        }
+      ],
+      "Offset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Radius": 96.60746
+    },
+    {
+      "PatternId": 2,
+      "Name": "tangible_3",
+      "KeepAlivePoints": 2,
+      "Points": [
+        {
+          "X": -111.0,
+          "Y": -61.0
+        },
+        {
+          "X": 109.0,
+          "Y": -68.0
+        },
+        {
+          "X": 2.0,
+          "Y": 129.0
+        }
+      ],
+      "Offset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Radius": 134.509781
+    },
+    {
+      "PatternId": 0,
+      "Name": "tangible_1",
+      "KeepAlivePoints": 2,
+      "Points": [
+        {
+          "X": -16.0,
+          "Y": -109.666626
+        },
+        {
+          "X": 100.0,
+          "Y": 36.333374
+        },
+        {
+          "X": -84.0,
+          "Y": 73.333374
+        }
+      ],
+      "Offset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Radius": 117.135307
+    }
+  ]
+}

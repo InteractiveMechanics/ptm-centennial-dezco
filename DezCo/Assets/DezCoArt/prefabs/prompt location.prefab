@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4691246389926904}
   - component: {fileID: 114626325125812876}
   - component: {fileID: 114435008504453264}
+  - component: {fileID: 114348415899330000}
+  - component: {fileID: 114853296734171966}
   - component: {fileID: 114191744837765510}
   m_Layer: 0
   m_Name: prompt location
@@ -39,7 +41,7 @@ GameObject:
   - component: {fileID: 4434478672432544}
   - component: {fileID: 212440078266000460}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: locationObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1462141686368562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.46, z: 0}
+  m_LocalPosition: {x: 0, y: 250, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4691246389926904}
@@ -65,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1170631736950096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.9908724, y: 14.965138, z: -71.42637}
+  m_LocalPosition: {x: -444.40002, y: 1832.556, z: 7.499995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4434478672432544}
@@ -83,6 +85,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8b61642d36644679735817219fcb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  childObject: {fileID: 0}
+  tile: {fileID: 0}
+--- !u!114 &114348415899330000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1170631736950096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4febe544112bb4678bdd59fa963c802d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mass: 1
+  _drag: 0
+  _useGravity: 0
+  _isKinematic: 0
+  _interpolation: 0
+  _collisionDetectionMode: 0
 --- !u!114 &114435008504453264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 0}
-  _isTrigger: 0
+  _isTrigger: 1
   _size: {x: 3, y: 3, z: 1}
   _offset: {x: 1.5, y: 1.5, z: 0.5}
 --- !u!114 &114626325125812876
@@ -110,9 +131,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _size: {x: 3, y: 3, z: 1}
-  _position: {x: 11, y: 26, z: 0}
+  _position: {x: 16, y: -1, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
+--- !u!114 &114853296734171966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1170631736950096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1925507eee33e42c2a04a1ae1eaa1ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212440078266000460
 SpriteRenderer:
   m_ObjectHideFlags: 1
