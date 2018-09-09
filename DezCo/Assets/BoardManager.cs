@@ -39,7 +39,6 @@ public class BoardManager : MonoBehaviour {
     private List<Vector3> gridPositions = new List<Vector3>();
     private Person[] persons;
     private PromptLocation[] promptLocations;
-    public int promptOffset;
 
     void InitializeList(){
         gridPositions.Clear();
@@ -142,14 +141,13 @@ public class BoardManager : MonoBehaviour {
         if (promptLocations.Length > 0){
             PromptLocation randomLocation = promptLocations[Random.Range(0, promptLocations.Length - 1)];
             IsoObject iso = randomLocation.GetComponent<IsoObject>();
-            Color tmp = randomLocation.GetComponentInChildren<SpriteRenderer>().color;
-            tmp.a = 1f;
-            randomLocation.GetComponentInChildren<SpriteRenderer>().color = tmp;
             Vector2 promptLocation2D = isoWorld.IsoToScreen(iso.position);
-            GameObject promptModal = Instantiate(Prompt, promptLocation2D, Quaternion.identity);
+            Debug.Log("iso to screen: "+promptLocation2D);
+            GameObject promptModal = Instantiate(Prompt);
             promptModal.transform.SetParent(canvas, false);
-            promptLocation2D = new Vector2(promptLocation2D.x, promptLocation2D.y + promptOffset);
-            promptModal.transform.position = promptLocation2D;
+            promptModal.gameObject.GetComponent<RectTransform>().anchoredPosition = promptLocation2D;
+            //Debug.Log("iso to screen: " + promptLocation2D);
+
         }
 
 
@@ -161,13 +159,10 @@ public class BoardManager : MonoBehaviour {
         // init steps
         boardHolder = board.transform;
         isoWorld = FindObjectOfType<IsoWorld>();
-        canvas = FindObjectOfType<Canvas>().transform;   
+        //Debug.Log(isoWorld);
+        canvas = GameObject.Find("uiCanvas").transform;   
         Populate();
         ActivateRandomPrompt();
-
-
-
-        //check if other tiles are in this position
 
 
     }

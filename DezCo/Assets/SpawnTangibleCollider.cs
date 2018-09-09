@@ -22,11 +22,10 @@ public class SpawnTangibleCollider : MonoBehaviour
     {
         isoWorld = FindObjectOfType<IsoWorld>();
         boardHolder = isoWorld.transform;
-        puck = Instantiate(puckObject, new Vector3(0f, 0f, 0f), Quaternion.identity) as GameObject;
+        puck = Instantiate(puckObject, new Vector3(0f, 0f, 0f), Quaternion.identity, boardHolder) as GameObject;
         puckData = puck.GetComponent<TangibleInfo>();
         puckData.tileIndex = puckIndex;
         iso = puck.GetComponent<IsoObject>();
-        puck.transform.SetParent(boardHolder);
     }
 
     // Update is called once per frame

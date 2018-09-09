@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4736348652343092}
   - component: {fileID: 114190868163012556}
   - component: {fileID: 114888099229895248}
+  - component: {fileID: 114438618312683036}
   m_Layer: 0
   m_Name: subway
   m_TagString: Untagged
@@ -86,6 +87,21 @@ MonoBehaviour:
   _position: {x: 14.2314, y: 19.4293, z: -5.4068}
   _renderersMode: 0
   _cachedRenderers: 0
+--- !u!114 &114438618312683036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1179541898051794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac2c23b247694461b050f2b22416bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthScript: {fileID: 0}
+  happiness: 10
+  environment: -10
+  budget: -30
 --- !u!114 &114888099229895248
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -21,13 +21,16 @@ public class PromptLocation : MonoBehaviour {
 
     void OnIsoTriggerEnter(IsoCollider other)
     {
+        TangibleInfo otherObjectInfo = other.gameObject.GetComponent<TangibleInfo>();
+        if (otherObjectInfo){
+            tile = otherObjectInfo.prefabTile;
+            gameObject.transform.Find("locationObject").gameObject.SetActive(false);
+            childObject = Instantiate(tile, gameObject.transform);
+            childObject.SetActive(true);
+            IsoObject iso = childObject.GetComponent<IsoObject>();
+            iso.position = gameObject.GetComponent<IsoObject>().position;
+        }
 
-        tile = other.gameObject.GetComponent<TangibleInfo>().prefabTile;
-        gameObject.transform.Find("locationObject").gameObject.SetActive(false);
-        childObject = Instantiate(tile, gameObject.transform);
-        childObject.SetActive(true);
-        IsoObject iso = childObject.GetComponent<IsoObject>();
-        iso.position = gameObject.GetComponent<IsoObject>().position;
 
     }
 
