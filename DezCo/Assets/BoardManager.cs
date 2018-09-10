@@ -22,6 +22,10 @@ public class BoardManager : MonoBehaviour {
         }
     }
 
+    //needs to be refactored into the gamemanager
+    private DataController dataController;
+    public GameData data;
+
     public int columns = 20;
     public int rows = 20;
     public Count treeCount = new Count(5, 9);
@@ -138,6 +142,9 @@ public class BoardManager : MonoBehaviour {
     public void ActivateRandomPrompt()
     {
         promptLocations = FindObjectsOfType<PromptLocation>();
+        Debug.Log(data.pucks);
+
+        GameData randomScenario = dataController.GetRandomScenario();;
         if (promptLocations.Length > 0){
             PromptLocation randomLocation = promptLocations[Random.Range(0, promptLocations.Length - 1)];
             IsoObject iso = randomLocation.GetComponent<IsoObject>();
@@ -145,7 +152,9 @@ public class BoardManager : MonoBehaviour {
             Debug.Log("iso to screen: "+promptLocation2D);
             GameObject promptModal = Instantiate(Prompt);
             promptModal.transform.SetParent(canvas, false);
+            promptModal.gameObject.GetComponent<Prompt>().promptLocation = randomLocation;
             promptModal.gameObject.GetComponent<RectTransform>().anchoredPosition = promptLocation2D;
+            promptModal.GetComponent<Prompt>().detailsText = randomScenario.scenarios[0].details;
             //Debug.Log("iso to screen: " + promptLocation2D);
 
         }
@@ -157,6 +166,9 @@ public class BoardManager : MonoBehaviour {
 
     public void SetupScene(){
         // init steps
+
+        dataController = FindObjectOfType<DataController>();
+        //data = dataController.GetCurrentData();
         boardHolder = board.transform;
         isoWorld = FindObjectOfType<IsoWorld>();
         //Debug.Log(isoWorld);

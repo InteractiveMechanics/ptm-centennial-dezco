@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114564024834769864}
   - component: {fileID: 114064492446717638}
   - component: {fileID: 114504748911752742}
+  - component: {fileID: 114196735409914566}
   m_Layer: 0
   m_Name: TangibleCollider
   m_TagString: Untagged
@@ -105,6 +106,19 @@ MonoBehaviour:
   _position: {x: 12, y: 0, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
+--- !u!114 &114196735409914566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1374202861351884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9234514c4ecd48938569aa504bd557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puckObject: {fileID: 0}
+  puckIndex: 0
 --- !u!114 &114504748911752742
 MonoBehaviour:
   m_ObjectHideFlags: 1

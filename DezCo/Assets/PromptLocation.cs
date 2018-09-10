@@ -10,13 +10,11 @@ public class PromptLocation : MonoBehaviour {
     private Color triggerAlpha;
     public GameObject childObject;
     public GameObject tile;
+    public Prompt prompt;
+    public PuckData[] pucks;
+    public ScenarioData[] scenarios;
 
-	// Use this for initialization
 	void Start () {
-        originalAlpha = gameObject.GetComponentInChildren<SpriteRenderer>().color;
-        triggerAlpha = originalAlpha;
-        triggerAlpha.a = 1f;
-
 	}
 
     void OnIsoTriggerEnter(IsoCollider other)
@@ -30,14 +28,11 @@ public class PromptLocation : MonoBehaviour {
             IsoObject iso = childObject.GetComponent<IsoObject>();
             iso.position = gameObject.GetComponent<IsoObject>().position;
         }
-
-
     }
 
     void OnIsoTriggerExit(IsoCollider other)
     {
-        gameObject.transform.Find("locationObject");
-        //gameObject.GetComponentInChildren<SpriteRenderer>().color = originalAlpha;
+        
 
     }
 	

@@ -5,10 +5,10 @@ using IsoTools;
 
 public class SpawnTangibleCollider : MonoBehaviour
 {
-
+    
     public GameObject puckObject;
-    public IsoWorld isoWorld;
-    public GameObject board;
+    private IsoWorld isoWorld;
+    private GameObject board;
     private Transform boardHolder;
     private Vector2 mousePosition;
     private GameObject puck;

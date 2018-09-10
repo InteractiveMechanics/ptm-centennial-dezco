@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour {
 
     public BoardManager boardScript;
 
+    //for refactoring 
+    //private DataController dataController;
+    //public GameData data;
+
 	// Use this for initialization
 	void Awake () {
         boardScript = GetComponent<BoardManager>();
@@ -13,6 +17,10 @@ public class GameManager : MonoBehaviour {
 	}
 
     void InitGame(){
+
+        //for refactoring as above
+        //dataController = FindObjectOfType<DataController>();
+        //data = dataController.GetCurrentData();
         boardScript.SetupScene();
         //boardScript.Populate();
     }

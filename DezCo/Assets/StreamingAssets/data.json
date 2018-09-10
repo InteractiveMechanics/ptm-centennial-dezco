@@ -1,0 +1,64 @@
+{
+  "scenarios": [
+
+  {
+  "name":"Scenario 1",
+  "type": "recreation",
+  "details": "It's really hot out today! What is there to do in the park that is cool and relaxing?",
+  "bestPuck": "theater",
+  "bestReward": [5,5,5],
+  "bestText": "Ah, nice and cool. I'll enjoy every minute away from the heat.",
+  "elseText": "Hm, not the best solutions for the bees, but it will do. Thanks for your help.",
+  "character": "leader"
+},
+{
+  "name":"Scenario 2",
+  "type": "infrastructure",
+  "details": "A clean community is a healthy community! How can we make Fairmount Park more green?",
+  "bestPuck": "recycling",
+  "bestReward": [0,5,10],
+  "bestText": "Recycling all this litter made Fairmount Park look brand new!",
+  "elseText": "Maybe they can help us clean up?",
+  "character": "mayor"
+},
+{
+  "name":"Scenario 3",
+  "type": "transportation",
+  "details": "I want to go to a birthday party in the park, but my friend lives too far away to walk.",
+  "bestPuck": "busStation",
+  "bestReward": [5,0,-5],
+  "bestText": "That was fast! This will help me get to the party and everyone else, too.",
+  "elseText": "I'm sure I'll get there, not sure when.",
+  "character": "child"
+}
+],
+"pucks":[
+  {
+    "name":"theater",
+    "type": "recreation",
+    "value": {
+      "happiness": 10,
+      "environment": -15,
+      "budget": -15
+    }
+  },
+  {
+    "name":"library",
+    "type": "infrastructure",
+    "value": {
+      "happiness": 10,
+      "environment": 0,
+      "budget": -15
+    }
+  },
+  {
+    "name":"buses",
+    "type": "transportation",
+    "value": {
+      "happiness": 5,
+      "environment": 0,
+      "budget": -10
+    }
+  }
+]
+}
