@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4596215595894318}
   - component: {fileID: 114076437150907636}
+  - component: {fileID: 114662292501679488}
   m_Layer: 0
   m_Name: ground
   m_TagString: Untagged
@@ -85,6 +86,17 @@ MonoBehaviour:
   _position: {x: 0, y: 0, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
+--- !u!114 &114662292501679488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1033450911501292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94817d2202c0643509fbe926c6631fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212546631550290886
 SpriteRenderer:
   m_ObjectHideFlags: 1

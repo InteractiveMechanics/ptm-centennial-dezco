@@ -18,7 +18,7 @@ namespace TE.Examples {
     }
 
     public void DoShow() {
-      GameObject.SetActive(true);
+      GameObject.SetActive(false);
     }
 
     public void DoHide() {

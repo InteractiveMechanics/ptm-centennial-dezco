@@ -21,10 +21,8 @@ GameObject:
   - component: {fileID: 4691246389926904}
   - component: {fileID: 114626325125812876}
   - component: {fileID: 114435008504453264}
-  - component: {fileID: 114348415899330000}
-  - component: {fileID: 114853296734171966}
   - component: {fileID: 114191744837765510}
-  - component: {fileID: 114472914889963198}
+  - component: {fileID: 114386864904565350}
   m_Layer: 0
   m_Name: PromptLocation
   m_TagString: PromptLocation
@@ -85,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1170631736950096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1312.4, y: 1327.38, z: 1.1300061}
+  m_LocalPosition: {x: -444.40002, y: 1426.332, z: 1.0350016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4910687803954604}
@@ -142,12 +140,17 @@ MonoBehaviour:
   prefabTile: {fileID: 0}
   tiles:
   - {fileID: 1179541898051794, guid: 5bbdb3549739c48eb95b98658fef578d, type: 2}
+  - {fileID: 1698245332255994, guid: 23fb343de45ad467586e2b33aca16e62, type: 2}
+  - {fileID: 1065576023974710, guid: aaa80320b86914737b77569abad523f8, type: 2}
   promptIndicators:
   - {fileID: 21300000, guid: 075891e224f9145f084b0d7787f6706c, type: 3}
   - {fileID: 21300000, guid: f3afc617d5ad7428c8d675b6bdcc11f1, type: 3}
   - {fileID: 21300000, guid: 0ce05580f2dd34a76a28f34b3b1b12af, type: 3}
   constructionObject: {fileID: 1462141686368562}
---- !u!114 &114348415899330000
+  targetTime: 5
+  locationOpen: 1
+  otherIndex: 0
+--- !u!114 &114386864904565350
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,15 +158,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1170631736950096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4febe544112bb4678bdd59fa963c802d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1925507eee33e42c2a04a1ae1eaa1ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 1
-  _drag: 0
-  _useGravity: 0
-  _isKinematic: 0
-  _interpolation: 0
-  _collisionDetectionMode: 0
 --- !u!114 &114435008504453264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,17 +176,6 @@ MonoBehaviour:
   _isTrigger: 1
   _size: {x: 3, y: 3, z: 1}
   _offset: {x: 1.5, y: 1.5, z: 0.5}
---- !u!114 &114472914889963198
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1170631736950096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02be875c33a5b4b2799ff198d4c93806, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114626325125812876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,20 +188,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _size: {x: 3, y: 3, z: 1}
-  _position: {x: 6, y: -1, z: 0}
+  _position: {x: 12, y: -5, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
---- !u!114 &114853296734171966
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1170631736950096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1925507eee33e42c2a04a1ae1eaa1ec5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212440078266000460
 SpriteRenderer:
   m_ObjectHideFlags: 1
