@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PromptLocation
   - IsoWorld
+  - person
+  - TangibleCollider
   layers:
   - Default
   - TransparentFX

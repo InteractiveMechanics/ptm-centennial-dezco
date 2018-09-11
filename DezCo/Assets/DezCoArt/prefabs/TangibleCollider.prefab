@@ -39,10 +39,9 @@ GameObject:
   - component: {fileID: 114564024834769864}
   - component: {fileID: 114064492446717638}
   - component: {fileID: 114504748911752742}
-  - component: {fileID: 114196735409914566}
   m_Layer: 0
   m_Name: TangibleCollider
-  m_TagString: Untagged
+  m_TagString: TangibleCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,19 +105,6 @@ MonoBehaviour:
   _position: {x: 12, y: 0, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
---- !u!114 &114196735409914566
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1374202861351884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9234514c4ecd48938569aa504bd557e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puckObject: {fileID: 0}
-  puckIndex: 0
 --- !u!114 &114504748911752742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,11 +116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e4f993d3998d483fba607d77c109c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabTile: {fileID: 0}
-  tiles:
-  - {fileID: 1179541898051794, guid: 5bbdb3549739c48eb95b98658fef578d, type: 2}
-  - {fileID: 1903913878704840, guid: a9a2de88ab1924142b0024691e0084b3, type: 2}
-  - {fileID: 1698245332255994, guid: 23fb343de45ad467586e2b33aca16e62, type: 2}
   tileIndex: 0
 --- !u!114 &114564024834769864
 MonoBehaviour:
