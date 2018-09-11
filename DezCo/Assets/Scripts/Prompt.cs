@@ -59,14 +59,15 @@ public class Prompt : MonoBehaviour {
 
     public void showResults(ModifyHealth health)
     {
-        
-        mainPanel.SetActive(false);
-        resultsPanel.SetActive(true);
-        completePanel.SetActive(false);
-        timerEnd = false;
-        resultsHappiness.text = health.happiness.ToString();
-        resultsEnvironment.text = health.environment.ToString();
-        resultsBudget.text = health.budget.ToString();
+        if (health){
+            mainPanel.SetActive(false);
+            resultsPanel.SetActive(true);
+            completePanel.SetActive(false);
+            timerEnd = false;
+            resultsHappiness.text = health.happiness.ToString();
+            resultsEnvironment.text = health.environment.ToString();
+            resultsBudget.text = health.budget.ToString();
+        }
     }
 
 

@@ -34,6 +34,8 @@ public class BoardManager : MonoBehaviour {
     public GameObject Person;
     public GameObject Prompt;
     public int population;
+    public int maxOpenPrompts;
+    public float promptGenTime;
 
     private Transform boardHolder;
     private Transform canvas;
@@ -41,7 +43,14 @@ public class BoardManager : MonoBehaviour {
     private IsoWorld isoWorld;
     private List<Vector3> gridPositions = new List<Vector3>();
     private Person[] persons;
+
+
     private PromptLocation[] promptLocations;
+    private List<PromptLocation> occupiedLocations = new List<PromptLocation>();
+    private List<PromptLocation> promptsWaiting = new List<PromptLocation>();
+    private List<PromptLocation> openLocations = new List<PromptLocation>();
+
+    public int maxClosedPrompts;
 
     void InitializeList(){
         gridPositions.Clear();
@@ -140,13 +149,13 @@ public class BoardManager : MonoBehaviour {
 
     public void ActivateRandomPrompt()
     {
-        promptLocations = FindObjectsOfType<PromptLocation>();
-        //Debug.Log(data.pucks);
+        //update lists
+        GetLocationLists();
 
+        //Transform _detach = _myList[Random.Range(0, _myList.Count)];
 
-        //Debug.Log(jsonData.scenarios[0]);
-        if (promptLocations.Length > 0){
-            PromptLocation randomLocation = promptLocations[Random.Range(0, promptLocations.Length - 1)];
+        if (promptsWaiting.Count < maxOpenPrompts){
+            PromptLocation randomLocation = openLocations[Random.Range(0, openLocations.Count)];
             IsoObject iso = randomLocation.GetComponent<IsoObject>();
             Vector2 promptLocation2D = isoWorld.IsoToScreen(iso.position);
             //Debug.Log("iso to screen: "+promptLocation2D);
@@ -166,6 +175,36 @@ public class BoardManager : MonoBehaviour {
 
     }
 
+    public void GetLocationLists(){
+        promptLocations = FindObjectsOfType<PromptLocation>();
+        occupiedLocations.Clear();
+        promptsWaiting.Clear();
+        openLocations.Clear();
+        for (int i = 0; i < promptLocations.Length; i++)
+        {
+            if (promptLocations[i].GetComponent<PromptLocation>().prompt)
+            {
+                occupiedLocations.Add(promptLocations[i]);
+                if (promptLocations[i].GetComponent<PromptLocation>().locationOpen){
+                    promptsWaiting.Add(promptLocations[i]);
+
+                }
+            } else {
+                openLocations.Add(promptLocations[i]);
+            }
+
+        }
+    }
+
+    public void ClearPrompts(){
+        
+    }
+
+    public void CheckAndActivatePrompts(){
+        InvokeRepeating("ActivateRandomPrompt", promptGenTime, 1);
+    }
+
+
 
     public void SetupScene(){
         // init steps
@@ -177,8 +216,7 @@ public class BoardManager : MonoBehaviour {
         //Debug.Log(isoWorld);
         canvas = GameObject.Find("uiCanvas").transform;   
         Populate();
-        ActivateRandomPrompt();
 
-
+        CheckAndActivatePrompts();
     }
 }

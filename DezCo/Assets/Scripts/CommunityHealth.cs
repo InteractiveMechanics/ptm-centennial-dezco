@@ -9,14 +9,18 @@ public class CommunityHealth : MonoBehaviour {
     public int CurrentEnvironment { get; set; }
     public int CurrentBudget { get; set; }
     public int MaxValue { get; set; }
-    public int EnvironmentThreshold { get; set; }
-    public int BudgetThreshold { get; set; }
+    public int EnvironmentThreshold;
+    public int BudgetThreshold;
+    public int AdjustedHappiness;
+    public int MaxPopulation;
+    //public int PreviousHappiness;
 
     public Slider happinessbar;
     public Slider environmentbar;
     public Slider budgetbar;
     public GameObject Pothole;
     public GameObject board;
+
 
 
 
@@ -36,33 +40,37 @@ public class CommunityHealth : MonoBehaviour {
         happinessbar.value = MaxValue;
         environmentbar.value = MaxValue;
         budgetbar.value = MaxValue;
+        InvokeRepeating("Sadness", 1, 1);
 
+    }
+
+    void Sadness(){
+        if (CurrentEnvironment < EnvironmentThreshold || CurrentBudget < BudgetThreshold){
+            Debug.Log("I'm sad");
+            AdjustedHappiness--;
+        } else {
+            AdjustedHappiness = 0;
+        }
+    }
+
+    void AdjustPopulation(){
+        
+        float happiness = CurrentHappiness;
+        float max = MaxValue;
+        float maxPop = MaxPopulation;
+        board.GetComponent<BoardManager>().population = Mathf.RoundToInt(maxPop * (happiness / max));
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         CalculateHealth();
-
-
-        //add trash
-        //update trees
-        //update grass
-
-
-        //if (Input.GetKey(KeyCode.X)){
-        //    CalculateHealth();
-        //}
+        AdjustPopulation();
             
     }
 
-    float CalculateValue(int value){
-        return value / MaxValue;
-    }
-
     public void CalculateHealth(){
-
-        int PreviousHappiness = CurrentHappiness;
 
         CurrentHappiness = MaxValue;
         CurrentEnvironment = MaxValue;
@@ -79,12 +87,7 @@ public class CommunityHealth : MonoBehaviour {
 
         }
 
-        if (CurrentEnvironment < EnvironmentThreshold || CurrentBudget < BudgetThreshold)
-        {
-            PreviousHappiness --;
-            CurrentHappiness = PreviousHappiness;
-        }
-
+        CurrentHappiness = CurrentHappiness + AdjustedHappiness;
         happinessbar.value = CurrentHappiness; //change sliders
         environmentbar.value = CurrentEnvironment;
         budgetbar.value = CurrentBudget;
@@ -99,17 +102,6 @@ public class CommunityHealth : MonoBehaviour {
             pothole.transform.SetParent(boardHolder);
         }
     }
-
-
-    //public void TallyHealth(int happinessAmount, int environmentAmount, int budgetAmount){
-    //    CurrentHappiness += happinessAmount;
-    //    CurrentEnvironment += environmentAmount;
-    //    CurrentBudget += budgetAmount;
-    //    happinessbar.value = CalculateValue();
-    //    if(CurrentHappiness<=0){
-    //        Die();
-    //    }
-    //}
 
     void Die(){
         CurrentHappiness = 0;
