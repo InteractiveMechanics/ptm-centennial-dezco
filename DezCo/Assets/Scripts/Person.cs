@@ -38,7 +38,7 @@ public class Person : MonoBehaviour {
         personRenderer.sprite = persons[0];
         //for random person
         //RandomPerson();
-        stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        //stateInfo = anim.GetCurrentAnimatorStateInfo(0);
 
     }
 
@@ -74,8 +74,8 @@ public class Person : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-        Debug.Log(stateInfo.fullPathHash);
+        //stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        //Debug.Log(stateInfo.fullPathHash);
 
     }
 }
