@@ -158,12 +158,12 @@ public class PromptLocation : MonoBehaviour {
         if (prompt){
             
             if (prompt.type == "recreation"){
-                locationSprite = promptIndicators[2];
-            } else if (prompt.type == "infrastructure"){
                 locationSprite = promptIndicators[1];
+            } else if (prompt.type == "infrastructure"){
+                locationSprite = promptIndicators[0];
             } else if (prompt.type == "transportation")
             {
-                locationSprite = promptIndicators[0];
+                locationSprite = promptIndicators[2];
             } else {
                 locationSprite = null;
             }

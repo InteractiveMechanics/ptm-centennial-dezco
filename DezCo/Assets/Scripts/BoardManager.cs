@@ -32,7 +32,7 @@ public class BoardManager : MonoBehaviour {
     public GameObject[] treeTiles;
     public GameObject[] outerWallTiles;
     public GameObject Person;
-    public GameObject Prompt;
+    public GameObject[] prompts;
     public int population;
     public int maxOpenPrompts;
     public float promptGenTime;
@@ -153,6 +153,8 @@ public class BoardManager : MonoBehaviour {
         GetLocationLists();
 
         //Transform _detach = _myList[Random.Range(0, _myList.Count)];
+
+        GameObject Prompt = prompts[Random.Range(0, prompts.Length)];
 
         if (promptsWaiting.Count < maxOpenPrompts){
             PromptLocation randomLocation = openLocations[Random.Range(0, openLocations.Count)];
