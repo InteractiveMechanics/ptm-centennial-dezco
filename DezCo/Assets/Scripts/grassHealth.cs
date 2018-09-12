@@ -12,7 +12,6 @@ public class grassHealth : MonoBehaviour
     public int unhealthyThreshold;
     public int fairThreshold;
     public int moderateThreshold;
-
     public Sprite unhealthy;
     public Sprite fair;
     public Sprite moderate;

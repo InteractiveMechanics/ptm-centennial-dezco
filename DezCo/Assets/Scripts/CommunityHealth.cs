@@ -65,8 +65,31 @@ public class CommunityHealth : MonoBehaviour {
         board.GetComponent<BoardManager>().population = Mathf.RoundToInt(maxPop * (happiness / max));
     }
 
-    void UpdateGrass(){
-        for (int i = 0; i < grass.Length; i++){
+    void UpdatePeople()
+    {
+        Person[] persons = board.GetComponent<BoardManager>().persons;
+        if (CurrentHappiness < previousHappiness){
+            for (int i = 0; i < persons.Length; i++)
+            {
+                Debug.Log(persons[i]);
+                persons[i].GetComponent<Person>().Sad();
+
+            }
+        } else if (CurrentHappiness > previousHappiness){
+            for (int i = 0; i < persons.Length; i++)
+            {
+                Debug.Log(persons[i]);
+                persons[i].GetComponent<Person>().Happy();
+            }
+        }
+
+    }
+
+
+    void UpdateGrass()
+    {
+        for (int i = 0; i < grass.Length; i++)
+        {
             //Debug.Log(grass[i]);
             grass[i].GetComponent<grassHealth>().CheckEnvironment();
         }
@@ -79,8 +102,14 @@ public class CommunityHealth : MonoBehaviour {
         CalculateHealth();
         AdjustPopulation();
         Debug.Log(previousHappiness+", "+CurrentHappiness);
-        if (previousHappiness!=CurrentHappiness) {
+        if (previousEnvironment!=CurrentEnvironment) {
             UpdateGrass();
+        }
+
+        if (previousHappiness != CurrentHappiness)
+        {
+            
+            UpdatePeople();
         }
             
     }

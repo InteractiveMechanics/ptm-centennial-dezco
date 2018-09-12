@@ -42,7 +42,7 @@ public class BoardManager : MonoBehaviour {
     public GameObject board;
     private IsoWorld isoWorld;
     private List<Vector3> gridPositions = new List<Vector3>();
-    private Person[] persons;
+    public Person[] persons;
 
 
     private PromptLocation[] promptLocations;
