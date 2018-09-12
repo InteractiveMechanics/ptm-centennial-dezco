@@ -52,7 +52,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1820599737049026}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1011579823966192}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puckObject: {fileID: 1374202861351884, guid: 4ce5cf25cf5cb42a6ab86e3a35c6ab16, type: 2}
-  isoWorld: {fileID: 0}
-  board: {fileID: 0}
+  puck: {fileID: 0}
+  puckIndex: 0
 --- !u!222 &222088685076015064
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -162,7 +162,7 @@ public class BoardManager : MonoBehaviour {
             GameObject promptModal = Instantiate(Prompt);
             promptModal.transform.SetParent(canvas, false);
             promptModal.gameObject.GetComponent<Prompt>().promptLocation = randomLocation;
-            Debug.Log(promptModal.gameObject.GetComponent<Prompt>().promptLocation);
+            //Debug.Log(promptModal.gameObject.GetComponent<Prompt>().promptLocation);
             promptModal.gameObject.GetComponent<RectTransform>().anchoredPosition = promptLocation2D;
             randomLocation.GetComponent<PromptLocation>().prompt = promptModal.GetComponent<Prompt>();
             //promptModal.GetComponent<Prompt>().detailsText = randomScenario.details;

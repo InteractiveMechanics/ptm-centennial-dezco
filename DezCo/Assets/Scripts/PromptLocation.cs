@@ -19,11 +19,12 @@ public class PromptLocation : MonoBehaviour {
     private bool timerEnd;
     private bool tangibleDown;
     public bool locationOpen = true;
-    private IsoCollider tempCollider;
+    private GameObject tempColliderObject;
+    private IsoBoxCollider iso;
     public int otherIndex;
 
 	void Start () {
-
+        iso = gameObject.GetComponent<IsoBoxCollider>();
 	}
 
     void OnIsoTriggerEnter(IsoCollider other)
@@ -32,7 +33,8 @@ public class PromptLocation : MonoBehaviour {
             
             otherIndex =  other.GetComponent<TangibleInfo>().tileIndex;
             if (otherIndex < tiles.Length -1){
-                tempCollider = other;
+                tempColliderObject = other.gameObject;
+                Debug.Log(other.gameObject);
                 Debug.Log("otherinfo added" + otherIndex);
 
 
@@ -43,7 +45,7 @@ public class PromptLocation : MonoBehaviour {
                 //hide mainprompt
                 prompt.hideAll();
                 tile = tiles[otherIndex];
-                //Debug.Log(otherObjectInfo.tileIndex);
+                Debug.Log(otherIndex);
                 locationObject.SetActive(false);
  
             }
@@ -93,8 +95,8 @@ public class PromptLocation : MonoBehaviour {
                     //Debug.Log(otherInfo.tileIndex);
                     locationObject.SetActive(false);
                     childObject.SetActive(true);
-                    IsoObject iso = childObject.GetComponent<IsoObject>();
-                    iso.position = gameObject.GetComponent<IsoObject>().position;
+                    IsoObject childIso = childObject.GetComponent<IsoObject>();
+                    childIso.position = gameObject.GetComponent<IsoObject>().position;
 
 
                     ModifyHealth health = childObject.GetComponent<ModifyHealth>();
@@ -120,11 +122,15 @@ public class PromptLocation : MonoBehaviour {
         //Debug.Log("otherinfo " + otherObjectInfo+", "+"tempCollider " + otherObjectInfo);
 
         //if we have info from collision enter but the object no longer exists
-
-        if (tempCollider == null && tile){
-            OnPuckExit(tile);
-            tile = null;
+        if(tempColliderObject){
+            Debug.Log("tempCollider exists!");
+            if (!tempColliderObject.activeSelf && tile)
+            {
+                OnPuckExit(tile);
+                tile = null;
+            }
         }
+
 
         //if childObject is active and prompt is present
         if(prompt && childObject) {
@@ -142,10 +148,13 @@ public class PromptLocation : MonoBehaviour {
         {
             timerEnded();
         }
+
         if (!prompt){
-            IsoCollider iso = gameObject.GetComponent<IsoBoxCollider>();
             iso.enabled = false;
+        } else {
+            iso.enabled = true;
         }
+
         if (prompt){
             
             if (prompt.type == "recreation"){

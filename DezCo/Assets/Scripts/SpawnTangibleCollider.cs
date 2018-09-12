@@ -11,7 +11,7 @@ public class SpawnTangibleCollider : MonoBehaviour
     private GameObject board;
     private Transform boardHolder;
     private Vector2 mousePosition;
-    private GameObject puck;
+    public GameObject puck;
     private Vector3 puckLocation3D = new Vector3(0f, 0f, 0f);
     private IsoObject iso;
     public int puckIndex;
@@ -31,7 +31,10 @@ public class SpawnTangibleCollider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        puckData.tileIndex = puckIndex;
         puckLocation3D = isoWorld.ScreenToIso(gameObject.transform.position);
+        //adjust to offset value
+        puckLocation3D = new Vector3(puckLocation3D.x - (iso.sizeX / 2), puckLocation3D.y - (iso.sizeY / 2), puckLocation3D.z);
         //Debug.Log(puckLocation3D);
         iso.position = puckLocation3D;
         //Debug.Log(puckLocation3D+", "+Input.mousePosition.x+", "+Input.mousePosition.y);
