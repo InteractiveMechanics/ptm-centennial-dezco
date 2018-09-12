@@ -8,18 +8,21 @@ public class CommunityHealth : MonoBehaviour {
     public int CurrentHappiness { get; set; }
     public int CurrentEnvironment { get; set; }
     public int CurrentBudget { get; set; }
+    public int previousHappiness { get; set; }
+    public int previousEnvironment { get; set; }
+    public int previousBudget { get; set; }
     public int MaxValue { get; set; }
     public int EnvironmentThreshold;
     public int BudgetThreshold;
     public int AdjustedHappiness;
     public int MaxPopulation;
-    //public int PreviousHappiness;
 
     public Slider happinessbar;
     public Slider environmentbar;
     public Slider budgetbar;
     public GameObject Pothole;
     public GameObject board;
+    public GameObject[] grass;
 
 
 
@@ -28,6 +31,7 @@ public class CommunityHealth : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        
         MaxValue = 100;
         CurrentHappiness = MaxValue;
         CurrentEnvironment = MaxValue;
@@ -61,17 +65,30 @@ public class CommunityHealth : MonoBehaviour {
         board.GetComponent<BoardManager>().population = Mathf.RoundToInt(maxPop * (happiness / max));
     }
 
+    void UpdateGrass(){
+        for (int i = 0; i < grass.Length; i++){
+            //Debug.Log(grass[i]);
+            grass[i].GetComponent<grassHealth>().CheckEnvironment();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         
         CalculateHealth();
         AdjustPopulation();
+        Debug.Log(previousHappiness+", "+CurrentHappiness);
+        if (previousHappiness!=CurrentHappiness) {
+            UpdateGrass();
+        }
             
     }
 
     public void CalculateHealth(){
-
+        previousHappiness = CurrentHappiness;
+        previousEnvironment = CurrentEnvironment;
+        previousBudget = CurrentBudget;
         CurrentHappiness = MaxValue;
         CurrentEnvironment = MaxValue;
         CurrentBudget = MaxValue;

@@ -13,7 +13,7 @@ public class TreeHealth : MonoBehaviour {
     public Sprite healthyTree;
     public Sprite dyingTree;
     public Sprite deadTree;
-    private SpriteRenderer renderer;
+    private SpriteRenderer treeRenderer;
 
 
 
@@ -22,7 +22,7 @@ public class TreeHealth : MonoBehaviour {
     {
         game = FindObjectOfType<GameManager>();
         health = game.GetComponent<CommunityHealth>();
-        renderer = transform.Find("sprite").GetComponent<SpriteRenderer>();
+        treeRenderer = transform.Find("sprite").GetComponent<SpriteRenderer>();
 
     }
 
@@ -30,14 +30,14 @@ public class TreeHealth : MonoBehaviour {
     {
         if (health.CurrentEnvironment < unhealthy)
         {
-            renderer.sprite = deadTree;
+            treeRenderer.sprite = deadTree;
         }
         else if(health.CurrentEnvironment < stagnant)
         {
-            renderer.sprite = dyingTree;
+            treeRenderer.sprite = dyingTree;
         } else 
         {
-            renderer.sprite = healthyTree;
+            treeRenderer.sprite = healthyTree;
         }
     }
 

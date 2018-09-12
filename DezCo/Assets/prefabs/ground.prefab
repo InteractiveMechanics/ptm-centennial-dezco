@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4596215595894318}
   - component: {fileID: 114076437150907636}
   - component: {fileID: 114662292501679488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4949819952144796}
   - component: {fileID: 212546631550290886}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1033450911501292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1920, y: 1080, z: 1}
+  m_LocalPosition: {x: -1920.0011, y: 3157.9932, z: 1.7160335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4949819952144796}
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _size: {x: 1, y: 1, z: 0}
-  _position: {x: 0, y: 0, z: 0}
+  _position: {x: 21.000006, y: 21.000017, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
 --- !u!114 &114662292501679488
@@ -97,6 +97,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94817d2202c0643509fbe926c6631fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  health: {fileID: 0}
+  unhealthyThreshold: 40
+  fairThreshold: 60
+  moderateThreshold: 80
+  unhealthy: {fileID: 21300000, guid: a6b95e46497a94b9ba6122ca15eba472, type: 3}
+  fair: {fileID: 21300000, guid: 8475ef71bcab5439bae3fc03ac610374, type: 3}
+  moderate: {fileID: 21300000, guid: 6ebe31c1ff45c4527bc65164d37188e6, type: 3}
+  healthy: {fileID: 21300000, guid: d282298b66ed44c7dbf87428a6d9eda2, type: 3}
+  grassRenderer: {fileID: 212546631550290886}
 --- !u!212 &212546631550290886
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -132,7 +142,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 988a824cad7af49eb9f74fe2f74c88fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d282298b66ed44c7dbf87428a6d9eda2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
