@@ -21,6 +21,6 @@ public class TangibleInfo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
 }

@@ -54,7 +54,6 @@ public class Person : MonoBehaviour {
         
 
         personRenderer.sprite = persons[Random.Range(0, persons.Length)];
-        Debug.Log(personRenderer.sprite.name);
     }
 
     // Update is called once per frame

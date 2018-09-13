@@ -18,8 +18,9 @@ public class Prompt : MonoBehaviour {
     public GameObject resultsPanel;
     public GameObject mainPanel;
     public GameObject incorrectPanel;
-    private bool timerEnd = true;
-    public float targetTime = 5.0f;
+    public bool timerEnd = true;
+    private float startTime = 5.0f;
+    private float targetTime;
     public Text resultsHappiness;
     public Text resultsEnvironment;
     public Text resultsBudget;
@@ -36,6 +37,7 @@ public class Prompt : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         isoWorld = GameObject.FindWithTag("IsoWorld").GetComponent<IsoWorld>();
+        targetTime = startTime;
 	}
 
     public void hideAll(){
@@ -75,18 +77,14 @@ public class Prompt : MonoBehaviour {
             mainPanel.SetActive(false);
             resultsPanel.SetActive(true);
             completePanel.SetActive(false);
+            //resetTimer and start counting
             timerEnd = false;
+            targetTime = startTime;
             resultsHappiness.text = health.happiness.ToString();
             resultsEnvironment.text = health.environment.ToString();
             resultsBudget.text = health.budget.ToString();
         }
     }
-
-
-    void timerEnded(){
-        hideAll();
-    }
-
 
 	
 	// Update is called once per frame
@@ -97,15 +95,18 @@ public class Prompt : MonoBehaviour {
             //decrease timer after showresults
             targetTime -= Time.deltaTime;
         }
+
         if (targetTime <= 0.0f)
         {
             timerEnd = true;
-            timerEnded();
+            targetTime = startTime;
+            hideAll();
         }
         
         Vector3 location3d = promptLocation.GetComponent<IsoObject>().position;
         Vector2 promptPosition = isoWorld.IsoToScreen(location3d);
         gameObject.GetComponent<RectTransform>().localPosition = new Vector2 (promptPosition.x- 1920f, promptPosition.y-1080f);
+
         //detailsText = (gameObject.transform.position.x + ", " + gameObject.transform.position.y);
         //detailsObject.GetComponent<Text>().text = detailsText;
 	}
