@@ -21,7 +21,7 @@ public class PromptLocation : MonoBehaviour
     private bool timerEnd;
     private bool tangibleDown;
     public bool locationOpen = true;
-    private GameObject tempColliderObject;
+    private IsoCollider tempColliderObject;
     private IsoBoxCollider iso;
     public int otherIndex;
 
@@ -33,10 +33,10 @@ public class PromptLocation : MonoBehaviour
     void OnIsoTriggerEnter(IsoCollider other)
     {
         
-        if (other.tag == "TangibleCollider")
+        if (other.tag == "TangibleCollider" )
         {
             tangibleDown = true;
-            tempColliderObject = other.gameObject;
+            tempColliderObject = other;
             if (CheckPuckIndex(other) && locationOpen)
             {
                 StartConstruction(other);
@@ -71,7 +71,12 @@ public class PromptLocation : MonoBehaviour
             {
                 //build new tile
                 OnPuckExit(tiles[other.GetComponent<TangibleCollider>().tileIndex]);
-            }else{
+            }else if (CheckPuckIndex(other)){
+                ResetPromptLocation();
+            } else if (childObject)
+            {
+                prompt.hideAll();
+            } else {
                 ResetPromptLocation();
             }
         }
@@ -158,6 +163,11 @@ public class PromptLocation : MonoBehaviour
         locationObject.SetActive(true);
     }
 
+    void ResetTimer(){
+        targetTime = constructionTime;
+        timerEnd = false;
+    }
+
 
 
 
@@ -172,25 +182,27 @@ public class PromptLocation : MonoBehaviour
         if(tempColliderObject){
             //Debug.Log("tempCollider exists!");
 
-            if (!tempColliderObject.activeSelf)
+            if (!tempColliderObject.gameObject.activeSelf)
             {
                 Debug.Log("puck lifted");
                 tangibleDown = false;
 
-                if (timerEnd){
+                if (CheckPuckIndex(tempColliderObject) && timerEnd){
                     OnPuckExit(tiles[tempColliderObject.GetComponent<TangibleCollider>().tileIndex]);
                     //OnPuckExit(tile);
                     tempColliderObject = null;
                 }
-                else
+                else if (!CheckPuckIndex(tempColliderObject) && !childObject)
                 {
+                    ResetPromptLocation();
+                } else if (childObject) {
+                    prompt.hideAll();
+                } else {
                     ResetPromptLocation();
                 }
             } 
         }
 
-        //if construction started we have an object reference 
-        //if object reference is inactive and the tile reference is set
 
 
 
@@ -199,16 +211,14 @@ public class PromptLocation : MonoBehaviour
             locationOpen = false;
         }
 
-        if (tangibleDown && !timerEnd) //if tangible is placed but timer has not ended
+        if (tangibleDown && !timerEnd && CheckPuckIndex(tempColliderObject)) //if tangible is placed but timer has not ended
         {
             //decrease timer when tangible is in place
             targetTime -= Time.deltaTime;
         } 
         else if (!tangibleDown) //if tangible is not placed
         {
-            //reset timer
-            targetTime = constructionTime;
-            timerEnd = false;
+            ResetTimer();
         }
 
         if (targetTime <= 0.0f)

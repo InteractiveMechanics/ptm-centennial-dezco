@@ -36,8 +36,10 @@ public class SpawnTangibleCollider : MonoBehaviour
             if(!puckData.isCollided){
                 incorrectPanel.SetActive(true);
                 //puckData.showIncorrect();
-            }else{
+            }else if(puckData.isCollided){
                 incorrectPanel.SetActive(false);
+            } else {
+                
             }
         }
     }
@@ -46,16 +48,7 @@ public class SpawnTangibleCollider : MonoBehaviour
     public void Update()
     {
         CheckPuckCollision();
-        if (!gameObject.activeSelf)
-        {
-            Debug.Log("puckinactive");
-            //if inactive, move off board
-            puck.gameObject.SetActive(false);
 
-
-        }
-        else
-        {
             //iso.position = new Vector3(-1f, -1f, 0f);
             puckData.tileIndex = puckIndex;
             puckLocation3D = isoWorld.ScreenToIso(gameObject.transform.position);
@@ -66,7 +59,7 @@ public class SpawnTangibleCollider : MonoBehaviour
             //Debug.Log(puckLocation3D+", "+Input.mousePosition.x+", "+Input.mousePosition.y);
 
             puck.gameObject.SetActive(true);
-        }
+  
 
     }
 

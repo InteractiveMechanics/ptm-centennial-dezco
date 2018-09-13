@@ -12,6 +12,11 @@ public class TangibleCollider : MonoBehaviour {
 	public int tileIndex;
     public bool isCollided;
 
+    void OnEnable()
+    {
+        isCollided = false;
+    }
+
 
     void OnIsoTriggerEnter(IsoCollider other){
         if (other.tag == "PromptLocation")
@@ -19,6 +24,9 @@ public class TangibleCollider : MonoBehaviour {
             isCollided = true;
         }
     }
+
+
+
 
     void OnIsoTriggerExit(IsoCollider other)
     {
