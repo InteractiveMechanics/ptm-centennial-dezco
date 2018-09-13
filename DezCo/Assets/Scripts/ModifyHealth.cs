@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class ModifyHealth : MonoBehaviour {
 
-    public CommunityHealth healthScript;
+    //public CommunityHealth healthScript;
     public int happiness;
     public int environment;
     public int budget;
+    public string type;
 
 
 
     // Use this for initialization
-    void Awake()
-    {
-        //healthScript = GetComponent<BoardManager>();
-        //healthScript.AdjustHealth(happiness, environment, budget);
-    }
+    //void Awake()
+    //{
+        
+    //    //healthScript = GetComponent<BoardManager>();
+    //    //healthScript.AdjustHealth(happiness, environment, budget);
+    //}
 
 
 }

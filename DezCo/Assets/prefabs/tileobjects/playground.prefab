@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4366541737375886}
   - component: {fileID: 114473364635036936}
   - component: {fileID: 114028780550405228}
+  - component: {fileID: 114742964721455648}
   m_Layer: 0
   m_Name: playground
   m_TagString: Untagged
@@ -101,6 +102,21 @@ MonoBehaviour:
   _position: {x: 14.2314, y: 19.4293, z: 3}
   _renderersMode: 0
   _cachedRenderers: 0
+--- !u!114 &114742964721455648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065576023974710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac2c23b247694461b050f2b22416bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  happiness: 5
+  environment: 0
+  budget: -10
+  type: recreation
 --- !u!212 &212414893597305188
 SpriteRenderer:
   m_ObjectHideFlags: 1

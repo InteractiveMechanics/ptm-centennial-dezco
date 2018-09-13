@@ -7,7 +7,6 @@ public class TreeHealth : MonoBehaviour {
     public bool open;
     public GameManager game;
     public CommunityHealth health;
-    public int healthy;
     public int stagnant;
     public int unhealthy;
     public Sprite healthyTree;

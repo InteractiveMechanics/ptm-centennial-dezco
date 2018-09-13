@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1614150676075984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1529.4087, y: 1707.135, z: 21.800047}
+  m_LocalPosition: {x: -1486, y: 1723.188, z: 129}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4082733472065938}
@@ -86,7 +86,8 @@ MonoBehaviour:
   open: 0
   game: {fileID: 0}
   health: {fileID: 0}
-  minEnvironment: 85
+  stagnant: 70
+  unhealthy: 30
   healthyTree: {fileID: 21300000, guid: 0cc8f1cbcc47c4134a7f647dac018cd1, type: 3}
   dyingTree: {fileID: 21300002, guid: 0cc8f1cbcc47c4134a7f647dac018cd1, type: 3}
   deadTree: {fileID: 21300004, guid: 0cc8f1cbcc47c4134a7f647dac018cd1, type: 3}
@@ -117,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _size: {x: 0.5, y: 0.5, z: 1}
-  _position: {x: 8.5, y: 4.0001, z: 0}
+  _position: {x: 9, y: 4, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
 --- !u!212 &212332228698966948
@@ -155,7 +156,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 0cc8f1cbcc47c4134a7f647dac018cd1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0cc8f1cbcc47c4134a7f647dac018cd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

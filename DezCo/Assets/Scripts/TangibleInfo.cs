@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//rename to tangibleCollider when possible
 public class TangibleInfo : MonoBehaviour {
 
     //public GameObject prefabTile;

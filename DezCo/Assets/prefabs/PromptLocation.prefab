@@ -140,8 +140,8 @@ MonoBehaviour:
   prefabTile: {fileID: 0}
   tiles:
   - {fileID: 1179541898051794, guid: 5bbdb3549739c48eb95b98658fef578d, type: 2}
-  - {fileID: 1698245332255994, guid: 23fb343de45ad467586e2b33aca16e62, type: 2}
   - {fileID: 1065576023974710, guid: aaa80320b86914737b77569abad523f8, type: 2}
+  - {fileID: 1326880474568456, guid: 25d79dbf9f8fd4f06b656856821a5d9c, type: 2}
   promptIndicators:
   - {fileID: 21300000, guid: 075891e224f9145f084b0d7787f6706c, type: 3}
   - {fileID: 21300000, guid: f3afc617d5ad7428c8d675b6bdcc11f1, type: 3}

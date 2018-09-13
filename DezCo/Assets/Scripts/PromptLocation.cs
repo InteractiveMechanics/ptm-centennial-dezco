@@ -32,7 +32,7 @@ public class PromptLocation : MonoBehaviour {
         if (other.tag == "TangibleCollider" && locationOpen) {
             
             otherIndex =  other.GetComponent<TangibleInfo>().tileIndex;
-            if (otherIndex < tiles.Length -1){
+            if (otherIndex < tiles.Length){
                 tempColliderObject = other.gameObject;
                 Debug.Log(other.gameObject);
                 Debug.Log("otherinfo added" + otherIndex);
@@ -68,7 +68,7 @@ public class PromptLocation : MonoBehaviour {
     {
         if (other.tag == "TangibleCollider" && locationOpen){
             int index = other.GetComponent<TangibleInfo>().tileIndex;
-            if (index < tiles.Length-1)
+            if (index < tiles.Length)
             {
                 OnPuckExit(tiles[other.GetComponent<TangibleInfo>().tileIndex]);
             }

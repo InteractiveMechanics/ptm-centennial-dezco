@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac2c23b247694461b050f2b22416bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthScript: {fileID: 0}
   happiness: 10
   environment: -15
   budget: -15
+  type: transportation
 --- !u!114 &114888099229895248
 MonoBehaviour:
   m_ObjectHideFlags: 1

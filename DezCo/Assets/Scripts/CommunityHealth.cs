@@ -12,6 +12,10 @@ public class CommunityHealth : MonoBehaviour {
     public int previousEnvironment { get; set; }
     public int previousBudget { get; set; }
     public int MaxValue { get; set; }
+
+    public int StartHappiness;
+    public int StartEnvironment;
+    public int StartBudget;
     public int EnvironmentThreshold;
     public int BudgetThreshold;
     public int AdjustedHappiness;
@@ -33,9 +37,7 @@ public class CommunityHealth : MonoBehaviour {
     {
         
         MaxValue = 100;
-        CurrentHappiness = MaxValue;
-        CurrentEnvironment = MaxValue;
-        CurrentBudget = MaxValue;
+        resetHealth();
 
         happinessbar.maxValue = MaxValue;
 
@@ -63,6 +65,12 @@ public class CommunityHealth : MonoBehaviour {
         float max = MaxValue;
         float maxPop = MaxPopulation;
         board.GetComponent<BoardManager>().population = Mathf.RoundToInt(maxPop * (happiness / max));
+    }
+
+    void resetHealth(){
+        CurrentHappiness = StartHappiness;
+        CurrentEnvironment = StartEnvironment;
+        CurrentBudget = StartBudget;
     }
 
     void UpdatePeople()
@@ -118,9 +126,9 @@ public class CommunityHealth : MonoBehaviour {
         previousHappiness = CurrentHappiness;
         previousEnvironment = CurrentEnvironment;
         previousBudget = CurrentBudget;
-        CurrentHappiness = MaxValue;
-        CurrentEnvironment = MaxValue;
-        CurrentBudget = MaxValue;
+
+        //might not be true?
+        resetHealth();
         
         var healthObjects = FindObjectsOfType<ModifyHealth>();
         for (int i = 0; i < healthObjects.Length; i++)
