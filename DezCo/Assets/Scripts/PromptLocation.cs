@@ -70,7 +70,7 @@ public class PromptLocation : MonoBehaviour
             if (CheckPuckIndex(other) && timerEnd)
             {
                 //build new tile
-                OnPuckExit(tiles[other.GetComponent<TangibleInfo>().tileIndex]);
+                OnPuckExit(tiles[other.GetComponent<TangibleCollider>().tileIndex]);
             }else{
                 ResetPromptLocation();
             }
@@ -104,7 +104,7 @@ public class PromptLocation : MonoBehaviour
     {
         bool same;
 
-        int index = other.GetComponent<TangibleInfo>().tileIndex;
+        int index = other.GetComponent<TangibleCollider>().tileIndex;
 
         if (index < tiles.Length)
         {
@@ -178,7 +178,7 @@ public class PromptLocation : MonoBehaviour
                 tangibleDown = false;
 
                 if (timerEnd){
-                    OnPuckExit(tiles[tempColliderObject.GetComponent<TangibleInfo>().tileIndex]);
+                    OnPuckExit(tiles[tempColliderObject.GetComponent<TangibleCollider>().tileIndex]);
                     //OnPuckExit(tile);
                     tempColliderObject = null;
                 }

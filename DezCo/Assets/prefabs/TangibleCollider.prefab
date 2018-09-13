@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114564024834769864}
   - component: {fileID: 114064492446717638}
   - component: {fileID: 114504748911752742}
+  - component: {fileID: 114804369200338310}
   m_Layer: 0
   m_Name: TangibleCollider
   m_TagString: TangibleCollider
@@ -117,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileIndex: 0
+  isCollided: 0
 --- !u!114 &114564024834769864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,6 +134,17 @@ MonoBehaviour:
   _isTrigger: 1
   _size: {x: 3, y: 3, z: 1}
   _offset: {x: 1.5, y: 1.5, z: 0.5}
+--- !u!114 &114804369200338310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1374202861351884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1925507eee33e42c2a04a1ae1eaa1ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212910418096418860
 SpriteRenderer:
   m_ObjectHideFlags: 1

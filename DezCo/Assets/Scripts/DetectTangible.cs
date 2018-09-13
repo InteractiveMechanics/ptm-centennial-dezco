@@ -45,7 +45,7 @@ public class DetectTangible : MonoBehaviour, IOnTangibleAdded, IOnTangibleUpdate
         e.GameObject.GetComponent<SpawnTangibleCollider>().Update();
         //update above will now toggle puck activity
         //e.GameObject.GetComponent<SpawnTangibleCollider>().puck.gameObject.SetActive(true);
-        Debug.Log(e.GameObject + "getTangible");
+        //Debug.Log(e.GameObject + "getTangible");
 
         return e;
     }

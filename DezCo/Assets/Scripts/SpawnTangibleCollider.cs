@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using IsoTools;
+using IsoTools.Physics;
 
 public class SpawnTangibleCollider : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class SpawnTangibleCollider : MonoBehaviour
     private Vector3 puckLocation3D = new Vector3(0f, 0f, 0f);
     private IsoObject iso;
     public int puckIndex;
-    private TangibleInfo puckData;
+    private TangibleCollider puckData;
+    public GameObject incorrectPanel;
 
     // Use this for initialization
     void Start()
@@ -23,15 +25,27 @@ public class SpawnTangibleCollider : MonoBehaviour
         isoWorld = FindObjectOfType<IsoWorld>();
         boardHolder = isoWorld.transform;
         puck = Instantiate(puckObject, new Vector3(0f, 0f, 0f), Quaternion.identity, boardHolder) as GameObject;
-        puckData = puck.GetComponent<TangibleInfo>();
+        puckData = puck.GetComponent<TangibleCollider>();
         puckData.tileIndex = puckIndex;
         iso = puck.GetComponent<IsoObject>();
+
+    }
+
+    void CheckPuckCollision(){
+        if (puck.gameObject.activeSelf){
+            if(!puckData.isCollided){
+                incorrectPanel.SetActive(true);
+                //puckData.showIncorrect();
+            }else{
+                incorrectPanel.SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame
     public void Update()
     {
-        
+        CheckPuckCollision();
         if (!gameObject.activeSelf)
         {
             Debug.Log("puckinactive");
