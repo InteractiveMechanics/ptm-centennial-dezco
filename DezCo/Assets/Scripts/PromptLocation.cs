@@ -31,8 +31,27 @@ public class PromptLocation : MonoBehaviour {
     {
         if (other.tag == "TangibleCollider" && locationOpen) {
             
-            otherIndex =  other.GetComponent<TangibleInfo>().tileIndex;
-            if (otherIndex < tiles.Length){
+            StartConstruction(other);
+
+        } else if(other.tag == "TangibleCollider" ) {
+            //need to check if puck and tile are of same type before startconstruction
+        }else {
+            Debug.Log(other);
+        }
+
+    }
+
+    void StartConstruction(IsoCollider other)
+    {
+        //get index of puck
+        otherIndex = other.GetComponent<TangibleInfo>().tileIndex;
+
+        if (otherIndex < tiles.Length)
+        {
+            //check to see if tile and prompt category match
+            string tileCategory = tiles[otherIndex].GetComponent<ModifyHealth>().type;
+            if (tileCategory == prompt.type)
+            {
                 tempColliderObject = other.gameObject;
                 Debug.Log(other.gameObject);
                 Debug.Log("otherinfo added" + otherIndex);
@@ -47,14 +66,13 @@ public class PromptLocation : MonoBehaviour {
                 tile = tiles[otherIndex];
                 Debug.Log(otherIndex);
                 locationObject.SetActive(false);
- 
             }
-
-
-        } else {
-            Debug.Log(other);
+            else
+            {
+                //prompt shows incorrect puck panel
+                prompt.showIncorrect();
+            }
         }
-
     }
 
     void timerEnded(){
@@ -66,6 +84,8 @@ public class PromptLocation : MonoBehaviour {
 
     void OnIsoTriggerExit(IsoCollider other)
     {
+
+        //functionality for initial puck placement
         if (other.tag == "TangibleCollider" && locationOpen){
             int index = other.GetComponent<TangibleInfo>().tileIndex;
             if (index < tiles.Length)

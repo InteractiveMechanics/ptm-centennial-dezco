@@ -109,7 +109,7 @@ public class CommunityHealth : MonoBehaviour {
         
         CalculateHealth();
         AdjustPopulation();
-        Debug.Log(previousHappiness+", "+CurrentHappiness);
+        //Debug.Log(previousHappiness+", "+CurrentHappiness);
         if (previousEnvironment!=CurrentEnvironment) {
             UpdateGrass();
         }

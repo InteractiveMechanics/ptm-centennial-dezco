@@ -17,6 +17,7 @@ public class Prompt : MonoBehaviour {
     public GameObject completePanel;
     public GameObject resultsPanel;
     public GameObject mainPanel;
+    public GameObject incorrectPanel;
     private bool timerEnd = true;
     public float targetTime = 5.0f;
     public Text resultsHappiness;
@@ -41,6 +42,7 @@ public class Prompt : MonoBehaviour {
         mainPanel.SetActive(false);
         resultsPanel.SetActive(false);
         completePanel.SetActive(false);
+        incorrectPanel.SetActive(false);
     }
 
     public void showMain()
@@ -48,6 +50,7 @@ public class Prompt : MonoBehaviour {
         mainPanel.SetActive(true);
         resultsPanel.SetActive(false);
         completePanel.SetActive(false);
+        incorrectPanel.SetActive(false);
     }
 
     public void showComplete()
@@ -55,6 +58,15 @@ public class Prompt : MonoBehaviour {
         mainPanel.SetActive(false);
         resultsPanel.SetActive(false);
         completePanel.SetActive(true);
+        incorrectPanel.SetActive(false);
+    }
+
+    public void showIncorrect()
+    {
+        mainPanel.SetActive(false);
+        resultsPanel.SetActive(false);
+        completePanel.SetActive(false);
+        incorrectPanel.SetActive(true);
     }
 
     public void showResults(ModifyHealth health)

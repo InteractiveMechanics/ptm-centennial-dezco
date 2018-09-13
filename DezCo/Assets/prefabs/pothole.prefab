@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4107248568571650}
   - component: {fileID: 114924589454330932}
   - component: {fileID: 114056271615725376}
+  - component: {fileID: 114515347992335742}
   m_Layer: 0
   m_Name: pothole
   m_TagString: Untagged
@@ -43,7 +44,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4107248568571650
 Transform:
   m_ObjectHideFlags: 1
@@ -51,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1439197856436258}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.16813, y: 17.419357, z: -75.226364}
+  m_LocalPosition: {x: 9.251465, y: 2476.5293, z: 56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4229231159660482}
@@ -65,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1489235983618654}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.75, z: 0}
+  m_LocalPosition: {x: 0, y: 175, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4107248568571650}
@@ -77,15 +78,30 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1439197856436258}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b256250c588ee4e4590a3e58eaa69b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 0}
   _isTrigger: 0
-  _size: {x: 1, y: 1, z: 1.5}
-  _offset: {x: 0.5, y: 0.5, z: 0.75}
+  _size: {x: 1, y: 1, z: 0.5}
+  _offset: {x: 0.5, y: 0.5, z: 0.25}
+--- !u!114 &114515347992335742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1439197856436258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d5c89e8a03646beb074560e44468db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  health: {fileID: 0}
+  budgetThreshold: 20
+  childObject: {fileID: 1489235983618654}
 --- !u!114 &114924589454330932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _size: {x: 1, y: 1, z: 0.5}
-  _position: {x: 14.2314, y: 22, z: 3}
+  _position: {x: 25.2264, y: 3, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
 --- !u!212 &212774904870466020
