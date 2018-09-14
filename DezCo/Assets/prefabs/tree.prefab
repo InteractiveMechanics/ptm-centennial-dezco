@@ -88,9 +88,9 @@ MonoBehaviour:
   health: {fileID: 0}
   stagnant: 70
   unhealthy: 30
-  healthyTree: {fileID: 21300000, guid: 0cc8f1cbcc47c4134a7f647dac018cd1, type: 3}
-  dyingTree: {fileID: 21300002, guid: 0cc8f1cbcc47c4134a7f647dac018cd1, type: 3}
-  deadTree: {fileID: 21300004, guid: 0cc8f1cbcc47c4134a7f647dac018cd1, type: 3}
+  healthyTree: {fileID: 21300000, guid: 02dc6511134b6410aaf56db0b13d7de8, type: 3}
+  dyingTree: {fileID: 21300002, guid: 02dc6511134b6410aaf56db0b13d7de8, type: 3}
+  deadTree: {fileID: 21300004, guid: 02dc6511134b6410aaf56db0b13d7de8, type: 3}
 --- !u!114 &114378770454154336
 MonoBehaviour:
   m_ObjectHideFlags: 1
