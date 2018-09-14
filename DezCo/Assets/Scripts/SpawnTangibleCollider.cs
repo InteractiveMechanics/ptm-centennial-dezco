@@ -47,6 +47,7 @@ public class SpawnTangibleCollider : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        
         CheckPuckCollision();
 
             //iso.position = new Vector3(-1f, -1f, 0f);
@@ -60,7 +61,7 @@ public class SpawnTangibleCollider : MonoBehaviour
 
             puck.gameObject.SetActive(true);
   
-
+        transform.rotation = Quaternion.identity;
     }
 
     public void OnDestroy()
