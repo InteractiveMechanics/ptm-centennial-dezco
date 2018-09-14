@@ -16,6 +16,9 @@ public class Person : MonoBehaviour {
     public SpriteRenderer personRenderer;
     public GameObject reaction;
     Animator anim;
+    public float maxUpdateInterval;
+    public float minUpdateInterval;
+    public int happinessThreshold;
 
 
     // Use this for initialization
@@ -23,7 +26,26 @@ public class Person : MonoBehaviour {
     {
         anim = reaction.gameObject.GetComponent<Animator>();
         RandomPerson();
+        //health = game.GetComponent<CommunityHealth>();
+        InvokeRepeating("CheckHappiness", Random.Range(minUpdateInterval, maxUpdateInterval), 10);
 
+    }
+
+    void CheckHappiness(){
+        Debug.Log(health);
+        if (health.CurrentHappiness < happinessThreshold)
+        {
+            
+                Sad();
+
+            
+        }
+        else if (health.CurrentHappiness > happinessThreshold)
+        {
+            
+                Happy();
+
+        }
     }
 
 
@@ -61,5 +83,10 @@ public class Person : MonoBehaviour {
     {
         
 
+    }
+
+    void OnDestroy()
+    {
+        CancelInvoke();
     }
 }

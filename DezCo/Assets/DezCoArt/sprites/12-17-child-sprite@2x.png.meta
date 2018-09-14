@@ -1,0 +1,866 @@
+fileFormatVersion: 2
+guid: fa950532ecf0a48e0bb9ed2bf16cfac7
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 12-17-child-sprite@2x_0
+    21300002: 12-17-child-sprite@2x_1
+    21300004: 12-17-child-sprite@2x_2
+    21300006: 12-17-child-sprite@2x_3
+    21300008: 12-17-child-sprite@2x_4
+    21300010: 12-17-child-sprite@2x_5
+    21300012: 12-17-child-sprite@2x_6
+    21300014: 12-17-child-sprite@2x_7
+    21300016: 12-17-child-sprite@2x_8
+    21300018: 12-17-child-sprite@2x_9
+    21300020: 12-17-child-sprite@2x_10
+    21300022: 12-17-child-sprite@2x_11
+    21300024: 12-17-child-sprite@2x_12
+    21300026: 12-17-child-sprite@2x_13
+    21300028: 12-17-child-sprite@2x_14
+    21300030: 12-17-child-sprite@2x_15
+    21300032: 12-17-child-sprite@2x_16
+    21300034: 12-17-child-sprite@2x_17
+    21300036: 12-17-child-sprite@2x_18
+    21300038: 12-17-child-sprite@2x_19
+    21300040: 12-17-child-sprite@2x_20
+    21300042: 12-17-child-sprite@2x_21
+    21300044: 12-17-child-sprite@2x_22
+    21300046: 12-17-child-sprite@2x_23
+    21300048: 12-17-child-sprite@2x_24
+    21300050: 12-17-child-sprite@2x_25
+    21300052: 12-17-child-sprite@2x_26
+    21300054: 12-17-child-sprite@2x_27
+    21300056: 12-17-child-sprite@2x_28
+    21300058: 12-17-child-sprite@2x_29
+    21300060: 12-17-child-sprite@2x_30
+    21300062: 12-17-child-sprite@2x_31
+    21300064: 12-17-child-sprite@2x_32
+    21300066: 12-17-child-sprite@2x_33
+    21300068: 12-17-child-sprite@2x_34
+    21300070: 12-17-child-sprite@2x_35
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd857152cae89452cba0f244027dc6b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fd9765c060440a997fe7465eb2a9dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59271ac4d8cee4d6a9d612be0a882f6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff7b87054dd2456a83c4016bc992d38
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbf331dd99fc4dd2ad03a3b3af1480b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_5
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80786876ae0c24d10b0b412009fa2743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a939e46a018354936aceac7cb7531501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa73cbeda54d341a0a5828233891f13c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c8c5dd35a964629ba9b24a1261d989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618ec670ae3d9427882a06c8256a2229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5e1f36e69404d3fabb9af47fa4232b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67ef7707e50348a78c3c440fc9e0253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78226e536b81494fa1734a941679514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_13
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b3f3b23d25941a88958c002c5d4edd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b09db45e75b4ec98aa8bdf2fa67564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9f3bdd20ac54bf0b3c60e69b78af1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53a477acb8e045c1bfcb72950ad0dec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_17
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a03e97706e5e45718ffb720c8ba1afb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ead2f68bb954e6194ae1ad36793af2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_19
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd89ab24b26d3423dbd09671503fadef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_20
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbb743d6536b428493e39f229485162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_21
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286fbd0740f314e34822505905faaf67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fbfa443837c4759bd176fa077207b4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_23
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc8a721d741d4376907d30cda18344b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0d13db79f45481783d68f2abeaa6f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_25
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b198ed90102a5400ab5aee1595c09297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025f9428570ef49169485eb40cb0c347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_27
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76efc139d90924352a7bb07b8f87fd29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_28
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b63ab15abdca49dba69022c558aaaee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_29
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede097bf0b6924a20a76d362b6886ca6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff31572d7955433b81ad0888139e3b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_31
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3eea0dc3b414e82b68aab21a5a3deb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75c65c93aab0459885b6790e35cf4db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_33
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c52f2fb959774780b5b275de81db25e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23ba915872d44217baf0646a40c7c71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-child-sprite@2x_35
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f84f3155043241b9afbe1497cdcfcd6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9284c2c14d54c447a8642db31968b5a6
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

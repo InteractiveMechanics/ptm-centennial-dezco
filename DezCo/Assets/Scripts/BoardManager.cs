@@ -133,6 +133,7 @@ public class BoardManager : MonoBehaviour {
         IsoObject iso = randomPerson.GetComponent<IsoObject>();
         iso.position = randomPosition;
         randomPerson.transform.SetParent(boardHolder);
+        randomPerson.GetComponent<Person>().health = this.gameObject.GetComponent<CommunityHealth>();
     }
 
     public void UpdatePopulation()

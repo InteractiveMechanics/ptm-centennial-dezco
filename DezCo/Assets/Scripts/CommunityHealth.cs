@@ -28,6 +28,8 @@ public class CommunityHealth : MonoBehaviour {
     public GameObject board;
     public GameObject[] grass;
 
+    public int updatePercent;
+
 
 
 
@@ -94,6 +96,8 @@ public class CommunityHealth : MonoBehaviour {
     }
 
 
+
+
     void UpdateGrass()
     {
         for (int i = 0; i < grass.Length; i++)
@@ -114,12 +118,9 @@ public class CommunityHealth : MonoBehaviour {
             UpdateGrass();
         }
 
-        if (previousHappiness != CurrentHappiness)
-        {
-            
-            UpdatePeople();
-        }
-            
+        //was used for updating on results
+        //UpdateRandomPeople();
+          
     }
 
     public void CalculateHealth(){
@@ -161,6 +162,19 @@ public class CommunityHealth : MonoBehaviour {
         CurrentHappiness = 0;
         Debug.Log("dead");
     }
+
+    public void UnhealthyBudget(){
+        StartBudget = 20;
+    }
 	
+    public void UnhealthyEnvironment()
+    {
+        StartEnvironment = 20;
+    }
+
+    public void UnhealthyHappiness()
+    {
+        StartHappiness = 20;
+    }
 	
 }

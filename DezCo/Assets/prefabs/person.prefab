@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1421705001409862}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -667.615, y: 1793.8596, z: 259.5}
+  m_LocalPosition: {x: -667.615, y: 1793.8596, z: 309.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4976252938382454}
@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940204139500638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 60, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4023863583768396}
@@ -171,32 +171,35 @@ MonoBehaviour:
   game: {fileID: 0}
   health: {fileID: 0}
   persons:
-  - {fileID: 21300062, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300060, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300050, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300048, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300038, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300036, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300012, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300014, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300024, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300026, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300000, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300002, guid: 05d1c35d6b298403eb2dff530ce7a2f7, type: 3}
-  - {fileID: 21300000, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
-  - {fileID: 21300002, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
-  - {fileID: 21300012, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
-  - {fileID: 21300014, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
-  - {fileID: 21300024, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
-  - {fileID: 21300026, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
-  - {fileID: 21300036, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
-  - {fileID: 21300038, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
-  - {fileID: 21300048, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
-  - {fileID: 21300050, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
-  - {fileID: 21300060, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
-  - {fileID: 21300062, guid: 5d15354fcd0b54f65b7d74d72beb239c, type: 3}
+  - {fileID: 21300000, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300002, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300012, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300014, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300024, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300026, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300036, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300038, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300048, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300050, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300060, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300062, guid: 6a08ae98c94a74315a0bf276ad1a5d99, type: 3}
+  - {fileID: 21300000, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
+  - {fileID: 21300002, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
+  - {fileID: 21300012, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
+  - {fileID: 21300014, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
+  - {fileID: 21300024, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
+  - {fileID: 21300026, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
+  - {fileID: 21300036, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
+  - {fileID: 21300038, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
+  - {fileID: 21300048, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
+  - {fileID: 21300050, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
+  - {fileID: 21300060, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
+  - {fileID: 21300062, guid: fa950532ecf0a48e0bb9ed2bf16cfac7, type: 3}
   personRenderer: {fileID: 212239301946830332}
   reaction: {fileID: 1940204139500638}
+  maxUpdateInterval: 30
+  minUpdateInterval: 10
+  happinessThreshold: 50
 --- !u!114 &114905256223013350
 MonoBehaviour:
   m_ObjectHideFlags: 1

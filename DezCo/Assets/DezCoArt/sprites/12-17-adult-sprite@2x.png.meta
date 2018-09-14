@@ -1,0 +1,866 @@
+fileFormatVersion: 2
+guid: 6a08ae98c94a74315a0bf276ad1a5d99
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 12-17-adult-sprite@2x_0
+    21300002: 12-17-adult-sprite@2x_1
+    21300004: 12-17-adult-sprite@2x_2
+    21300006: 12-17-adult-sprite@2x_3
+    21300008: 12-17-adult-sprite@2x_4
+    21300010: 12-17-adult-sprite@2x_5
+    21300012: 12-17-adult-sprite@2x_6
+    21300014: 12-17-adult-sprite@2x_7
+    21300016: 12-17-adult-sprite@2x_8
+    21300018: 12-17-adult-sprite@2x_9
+    21300020: 12-17-adult-sprite@2x_10
+    21300022: 12-17-adult-sprite@2x_11
+    21300024: 12-17-adult-sprite@2x_12
+    21300026: 12-17-adult-sprite@2x_13
+    21300028: 12-17-adult-sprite@2x_14
+    21300030: 12-17-adult-sprite@2x_15
+    21300032: 12-17-adult-sprite@2x_16
+    21300034: 12-17-adult-sprite@2x_17
+    21300036: 12-17-adult-sprite@2x_18
+    21300038: 12-17-adult-sprite@2x_19
+    21300040: 12-17-adult-sprite@2x_20
+    21300042: 12-17-adult-sprite@2x_21
+    21300044: 12-17-adult-sprite@2x_22
+    21300046: 12-17-adult-sprite@2x_23
+    21300048: 12-17-adult-sprite@2x_24
+    21300050: 12-17-adult-sprite@2x_25
+    21300052: 12-17-adult-sprite@2x_26
+    21300054: 12-17-adult-sprite@2x_27
+    21300056: 12-17-adult-sprite@2x_28
+    21300058: 12-17-adult-sprite@2x_29
+    21300060: 12-17-adult-sprite@2x_30
+    21300062: 12-17-adult-sprite@2x_31
+    21300064: 12-17-adult-sprite@2x_32
+    21300066: 12-17-adult-sprite@2x_33
+    21300068: 12-17-adult-sprite@2x_34
+    21300070: 12-17-adult-sprite@2x_35
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db0c838b15734b4c86eb5dbfa504348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c2b64c4c75f4054ae1457aa3ec4132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e72c74e1973d4c0795841159db7015c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491d72ebf0ce444478479ef26ef0b48e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e1b1ac43e74465ea4c7025c30f3d18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_5
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 170.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf035a87e51c4e43aed98bbab75740b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae1bf1b599e14e698667a11504e8a8c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcda61168081043b9bad313301b4736c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8995a7dd2b743928336ddb6e9eddda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ce3fb5885e64ae18d8af6211cecfe4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631e9252cf5a5444bae4c5f5fd250f18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 136.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9faa1b00088b943b89b92ff79c69e091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e51823f422742b2863e1a8d462693e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_13
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578b603bc14dd4e81b492d9f5d34cc0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf9e8f8efdb440aaaf933f0f4d58e52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1942002f92573453594939c531f0353c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2811bbbce4974ffe82d92a3e5778027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_17
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 102.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cdc2485f93249f5bde552a5713a7b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d3b468f92c9413f854711d9a108831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_19
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad330cb8c321f4f2296fe6f51c9e174d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_20
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1be14401625e4bbe978d522eef60ef1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_21
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9316214f5d0e455088e7ca238a0560c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee06fb797f43e4e248f579c98de97bc3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_23
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 68.83333
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23d293224d9a4ffd97cba3861105108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e80beaa7834477cab3afae06afdb73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_25
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46191d78e2d764bb39acf11ad86cc8c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eee754f63f394949a90fcf8a1c844e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_27
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04476eb6f8f543a598dc9e700e8f270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_28
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4d2ddda9d984630a35c05798b1df6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_29
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 34.833332
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b095eeabf1842d1ac145d47f30f18f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5812dc5582394f488d21299fa10a480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_31
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeeb180cde2484d3d90ad5012d4ab561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad9131a4203446e5aa05b7103d18935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_33
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55635425c68c4be0b7863a761f69d4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3d8d248bf324eb4923d0e285caf598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12-17-adult-sprite@2x_35
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0.83333206
+        width: 24
+        height: 34.166668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba8035d4816c45abb44cbc62ea8c919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e2e24ba078bb8425d8502944ce3cea8b
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

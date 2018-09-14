@@ -81,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1903913878704840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1833.2002, y: 3136.9863, z: 75.49942}
+  m_LocalPosition: {x: -444.40015, y: 2415.852, z: 127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4930073352062514}
@@ -116,7 +116,7 @@ MonoBehaviour:
   open: 1
   game: {fileID: 0}
   health: {fileID: 0}
-  minBudget: 90
+  minBudget: 30
 --- !u!114 &114807982043524526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _size: {x: 3, y: 3, z: 1.08}
-  _position: {x: 21, y: 20, z: 0}
+  _position: {x: 22, y: 5, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
 --- !u!114 &114932436844671132
