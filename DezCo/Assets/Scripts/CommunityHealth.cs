@@ -164,17 +164,17 @@ public class CommunityHealth : MonoBehaviour {
     }
 
     public void UnhealthyBudget(){
-        StartBudget = 20;
+        StartBudget =  StartBudget - 20 ;
     }
 	
     public void UnhealthyEnvironment()
     {
-        StartEnvironment = 20;
+        StartEnvironment = StartEnvironment - 20;
     }
 
     public void UnhealthyHappiness()
     {
-        StartHappiness = 20;
+        StartHappiness = StartHappiness - 20;
     }
 	
 }
