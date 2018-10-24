@@ -43,12 +43,13 @@ public class PromptLocation : MonoBehaviour
             }
             else if (CheckPuckIndex(other))
             {
-                Destroy(childObject);
+                //Destroy(childObject);
                 StartConstruction(other);
             }
             else
             {
                 //prompt.showIncorrect();
+                StartConstruction(other);
             }
         }
         else
@@ -71,13 +72,15 @@ public class PromptLocation : MonoBehaviour
             {
                 //build new tile
                 OnPuckExit(tiles[other.GetComponent<TangibleCollider>().tileIndex]);
-            }else if (CheckPuckIndex(other)){
-                ResetPromptLocation();
-            } else if (childObject)
+            } else if (!CheckPuckIndex(other) && childObject && timerEnd) //delete if timer is out at puck is delete puck
             {
-                prompt.hideAll();
-            } else {
                 ResetPromptLocation();
+            }else if (!childObject)
+            {
+                ResetPromptLocation();
+            }  else {
+                prompt.hideAll();
+                constructionObject.SetActive(false);
             }
         }
         else
@@ -108,31 +111,20 @@ public class PromptLocation : MonoBehaviour
 
     bool CheckPuckIndex(IsoCollider other)
     {
-        //bool same;
+        bool notDelete;
 
-        //int index = other.GetComponent<TangibleCollider>().tileIndex;
+        int index = other.GetComponent<TangibleCollider>().tileIndex;
 
-        //if (index < tiles.Length)
-        //{
-        //    string tileCategory = tiles[index].GetComponent<ModifyHealth>().type;
-        //    if (tileCategory == prompt.type)
-        //    {
-        //        same = true;
-        //    }
-        //    else
-        //    {
-        //        same = false;
-        //    }
-        //}
-        //else
-        //{
-        //    same = false;
-        //}
+        if (index < tiles.Length)
+        {
+            notDelete = true;
+        } else {
+            //if out of range of tiles array the puck must be 'delete'
+            notDelete = false;
+        }
 
-        //return same;
 
-        //removed above for free play
-        return true;
+        return notDelete;
     }
 
     void StartConstruction(IsoCollider other)
@@ -196,13 +188,17 @@ public class PromptLocation : MonoBehaviour
                     //OnPuckExit(tile);
                     tempColliderObject = null;
                 }
+                else if (!CheckPuckIndex(tempColliderObject) && childObject && timerEnd) //delete if timer is out at puck is delete puck
+                {
+                    ResetPromptLocation();
+                }
                 else if (!childObject)
                 {
-                    //prompt.hideAll();
                     ResetPromptLocation();
 
                 } else {
-                    ResetPromptLocation();
+                    prompt.hideAll();
+                    constructionObject.SetActive(false);
                 } 
             } 
         }
