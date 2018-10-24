@@ -41,7 +41,7 @@ public class PromptLocation : MonoBehaviour
             {
                 StartConstruction(other);
             }
-            else if (CheckPuckIndex(other))
+            else if (!CheckPuckIndex(other))
             {
                 //Destroy(childObject);
                 StartConstruction(other);
@@ -72,10 +72,10 @@ public class PromptLocation : MonoBehaviour
             {
                 //build new tile
                 OnPuckExit(tiles[other.GetComponent<TangibleCollider>().tileIndex]);
-            } else if (!CheckPuckIndex(other) && childObject && timerEnd) //delete if timer is out at puck is delete puck
+            } else if (!childObject)
             {
                 ResetPromptLocation();
-            }else if (!childObject)
+            }else if (!CheckPuckIndex(other) && childObject) //delete if puck is delete puck
             {
                 ResetPromptLocation();
             }  else {
@@ -188,14 +188,13 @@ public class PromptLocation : MonoBehaviour
                     //OnPuckExit(tile);
                     tempColliderObject = null;
                 }
-                else if (!CheckPuckIndex(tempColliderObject) && childObject && timerEnd) //delete if timer is out at puck is delete puck
-                {
-                    ResetPromptLocation();
-                }
                 else if (!childObject)
                 {
                     ResetPromptLocation();
 
+                }else if (!CheckPuckIndex(tempColliderObject) && childObject) //delete if timer is out at puck is delete puck
+                {
+                    ResetPromptLocation();
                 } else {
                     prompt.hideAll();
                     constructionObject.SetActive(false);
@@ -211,7 +210,7 @@ public class PromptLocation : MonoBehaviour
         //    locationOpen = false;
         //}
 
-        if (tangibleDown && !timerEnd && CheckPuckIndex(tempColliderObject)) //if tangible is placed but timer has not ended
+        if (tangibleDown && !timerEnd) //if tangible is placed but timer has not ended
         {
             //decrease timer when tangible is in place
             targetTime -= Time.deltaTime;
