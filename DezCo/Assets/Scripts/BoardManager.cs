@@ -144,7 +144,7 @@ public class BoardManager : MonoBehaviour {
             InstantiatePerson();
         } else if ( persons.Length > population)
         {
-            Destroy(persons[persons.Length - 1].gameObject);
+            Destroy(persons[persons.Length-1].gameObject);
         }    
     }
 
@@ -157,6 +157,8 @@ public class BoardManager : MonoBehaviour {
 
         GameObject Prompt = prompts[Random.Range(0, prompts.Length)];
 
+
+        //freeplay means all locations are open
         if (promptsWaiting.Count < maxOpenPrompts){
             PromptLocation randomLocation = openLocations[Random.Range(0, openLocations.Count)];
             IsoObject iso = randomLocation.GetComponent<IsoObject>();
@@ -170,13 +172,32 @@ public class BoardManager : MonoBehaviour {
             randomLocation.GetComponent<PromptLocation>().prompt = promptModal.GetComponent<Prompt>();
             //promptModal.GetComponent<Prompt>().detailsText = randomScenario.details;
 
+        }
+    }
 
+    public void ActivateAllPrompts()
+    {
+        promptLocations = FindObjectsOfType<PromptLocation>();
+
+        GameObject Prompt = prompts[0];
+
+        for (int i = 0; i < promptLocations.Length; i++)
+        {
+            IsoObject iso = promptLocations[i].GetComponent<IsoObject>();
+            Vector2 promptLocation2D = isoWorld.IsoToScreen(iso.position);
+            //Debug.Log("iso to screen: "+promptLocation2D);
+            GameObject promptModal = Instantiate(Prompt);
+            promptModal.transform.SetParent(canvas, false);
+            promptModal.gameObject.GetComponent<Prompt>().promptLocation = promptLocations[i];
+            //Debug.Log(promptModal.gameObject.GetComponent<Prompt>().promptLocation);
+            promptModal.gameObject.GetComponent<RectTransform>().anchoredPosition = promptLocation2D;
+            promptLocations[i].GetComponent<PromptLocation>().prompt = promptModal.GetComponent<Prompt>();
+            //promptModal.GetComponent<Prompt>().detailsText = randomScenario.details;
 
         }
-
-
-
     }
+
+
 
     public void GetLocationLists(){
         promptLocations = FindObjectsOfType<PromptLocation>();
@@ -204,6 +225,7 @@ public class BoardManager : MonoBehaviour {
     }
 
     public void CheckAndActivatePrompts(){
+        
         InvokeRepeating("ActivateRandomPrompt", promptGenTime, 1);
     }
 
@@ -220,6 +242,9 @@ public class BoardManager : MonoBehaviour {
         canvas = GameObject.Find("uiCanvas").transform;   
         Populate();
 
-        CheckAndActivatePrompts();
+
+        //removing for free play
+        //CheckAndActivatePrompts();
+        ActivateAllPrompts();
     }
 }

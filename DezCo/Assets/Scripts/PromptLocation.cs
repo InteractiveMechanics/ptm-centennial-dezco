@@ -48,7 +48,7 @@ public class PromptLocation : MonoBehaviour
             }
             else
             {
-                prompt.showIncorrect();
+                //prompt.showIncorrect();
             }
         }
         else
@@ -92,7 +92,7 @@ public class PromptLocation : MonoBehaviour
     {
 
         Debug.Log("puckExit!");
-
+        Destroy(childObject);
         childObject = Instantiate(newTile, gameObject.transform);
         constructionObject.SetActive(false);
         locationObject.SetActive(false);
@@ -100,35 +100,39 @@ public class PromptLocation : MonoBehaviour
         IsoObject childIso = childObject.GetComponent<IsoObject>();
         childIso.position = gameObject.GetComponent<IsoObject>().position;
         ModifyHealth health = childObject.GetComponent<ModifyHealth>();
-        //display answer prompt
-        prompt.showResults(health);
+        //display nothing after
+        prompt.hideAll();
+        tempColliderObject = null;
 
     }
 
     bool CheckPuckIndex(IsoCollider other)
     {
-        bool same;
+        //bool same;
 
-        int index = other.GetComponent<TangibleCollider>().tileIndex;
+        //int index = other.GetComponent<TangibleCollider>().tileIndex;
 
-        if (index < tiles.Length)
-        {
-            string tileCategory = tiles[index].GetComponent<ModifyHealth>().type;
-            if (tileCategory == prompt.type)
-            {
-                same = true;
-            }
-            else
-            {
-                same = false;
-            }
-        }
-        else
-        {
-            same = false;
-        }
+        //if (index < tiles.Length)
+        //{
+        //    string tileCategory = tiles[index].GetComponent<ModifyHealth>().type;
+        //    if (tileCategory == prompt.type)
+        //    {
+        //        same = true;
+        //    }
+        //    else
+        //    {
+        //        same = false;
+        //    }
+        //}
+        //else
+        //{
+        //    same = false;
+        //}
 
-        return same;
+        //return same;
+
+        //removed above for free play
+        return true;
     }
 
     void StartConstruction(IsoCollider other)
@@ -157,8 +161,8 @@ public class PromptLocation : MonoBehaviour
     void ResetPromptLocation()
     {
         Debug.Log("reset prompt");
-        //Destroy(childObject);
-        prompt.showMain();
+        Destroy(childObject);
+        prompt.hideAll();
         constructionObject.SetActive(false);
         locationObject.SetActive(true);
     }
@@ -192,24 +196,24 @@ public class PromptLocation : MonoBehaviour
                     //OnPuckExit(tile);
                     tempColliderObject = null;
                 }
-                else if (!CheckPuckIndex(tempColliderObject) && !childObject)
+                else if (!childObject)
                 {
+                    //prompt.hideAll();
                     ResetPromptLocation();
-                } else if (childObject) {
-                    prompt.hideAll();
+
                 } else {
                     ResetPromptLocation();
-                }
+                } 
             } 
         }
 
 
 
 
-        if (prompt && childObject) //if childObject is active and prompt is present set location open to false
-        {
-            locationOpen = false;
-        }
+        //if (prompt && childObject) //if childObject is active and prompt is present set location open to false
+        //{
+        //    locationOpen = false;
+        //}
 
         if (tangibleDown && !timerEnd && CheckPuckIndex(tempColliderObject)) //if tangible is placed but timer has not ended
         {
@@ -226,36 +230,19 @@ public class PromptLocation : MonoBehaviour
             timerEnded();
         }
 
-        if (!prompt)
-        {
-            iso.enabled = false;
-        }
-        else
-        {
-            iso.enabled = true;
-        }
+        //disabled for free play
 
-        if (prompt)
-        {
+        //if (!prompt)
+        //{
+        //    iso.enabled = false;
+        //}
+        //else
+        //{
+        //    iso.enabled = true;
+        //}
 
-            if (prompt.type == "recreation")
-            {
-                locationSprite = promptIndicators[1];
-            }
-            else if (prompt.type == "infrastructure")
-            {
-                locationSprite = promptIndicators[0];
-            }
-            else if (prompt.type == "transportation")
-            {
-                locationSprite = promptIndicators[2];
-            }
-            else
-            {
-                locationSprite = null;
-            }
+        iso.enabled = true;
 
-        }
-        locationObject.GetComponent<SpriteRenderer>().sprite = locationSprite;
+
     }
 }

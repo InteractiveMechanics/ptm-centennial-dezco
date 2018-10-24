@@ -36,7 +36,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4970719715991708}
   - component: {fileID: 114855172239419016}
-  - component: {fileID: 114378770454154336}
   - component: {fileID: 114301617462629408}
   m_Layer: 0
   m_Name: tree
@@ -65,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1614150676075984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1486, y: 1723.188, z: 129}
+  m_LocalPosition: {x: -1634.8013, y: 2083.6553, z: 193.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4082733472065938}
@@ -91,21 +90,6 @@ MonoBehaviour:
   healthyTree: {fileID: 21300000, guid: 02dc6511134b6410aaf56db0b13d7de8, type: 3}
   dyingTree: {fileID: 21300002, guid: 02dc6511134b6410aaf56db0b13d7de8, type: 3}
   deadTree: {fileID: 21300004, guid: 02dc6511134b6410aaf56db0b13d7de8, type: 3}
---- !u!114 &114378770454154336
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614150676075984}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b256250c588ee4e4590a3e58eaa69b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _material: {fileID: 0}
-  _isTrigger: 0
-  _size: {x: 0.5, y: 0.5, z: 1}
-  _offset: {x: 0.25, y: 0.25, z: 0.5}
 --- !u!114 &114855172239419016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _size: {x: 0.5, y: 0.5, z: 1}
-  _position: {x: 9, y: 4, z: 0}
+  _position: {x: 11.7857, y: 8.5, z: 0}
   _renderersMode: 0
   _cachedRenderers: 0
 --- !u!212 &212332228698966948
