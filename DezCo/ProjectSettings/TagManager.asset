@@ -8,6 +8,7 @@ TagManager:
   - IsoWorld
   - person
   - TangibleCollider
+  - TileObject
   layers:
   - Default
   - TransparentFX

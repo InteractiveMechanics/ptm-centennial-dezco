@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114210005232404518}
   m_Layer: 0
   m_Name: community
-  m_TagString: Untagged
+  m_TagString: TileObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   happiness: 10
   environment: -15
   budget: -15
-  type: transportation
+  type: infrastructure
 --- !u!114 &114766207724002568
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -20,6 +20,8 @@ public class CommunityHealth : MonoBehaviour {
     public int BudgetThreshold;
     public int AdjustedHappiness;
     public int MaxPopulation;
+    public int CommentThreshold;
+    public string[] TileTags;
 
     public Slider happinessbar;
     public Slider environmentbar;
@@ -27,6 +29,11 @@ public class CommunityHealth : MonoBehaviour {
     public GameObject Pothole;
     public GameObject board;
     public GameObject[] grass;
+
+    public GameObject commentObject;
+    public Transform uiCanvas;
+
+    public IsoWorld isoWorld;
 
     public int updatePercent;
 
@@ -49,7 +56,7 @@ public class CommunityHealth : MonoBehaviour {
         environmentbar.value = MaxValue;
         budgetbar.value = MaxValue;
         InvokeRepeating("Sadness", 1, 1);
-
+        InvokeRepeating("GenerateRandomComment", 5, 1);
     }
 
     void Sadness(){
@@ -92,6 +99,78 @@ public class CommunityHealth : MonoBehaviour {
                 persons[i].GetComponent<Person>().Happy();
             }
         }
+
+    }
+
+    void GenerateRandomComment()
+    {
+
+
+        List<string> comments = new List<string>();
+        Person[] persons = board.GetComponent<BoardManager>().persons;
+
+        var healthObjects = FindObjectsOfType<ModifyHealth>();
+        for (int i = 0; i < TileTags.Length; i++){
+            GameObject[] TileObjects = GameObject.FindGameObjectsWithTag(TileTags[i]);
+            if (TileObjects.Length>= 3){
+                comments.Add("I wanted to walk in the park, but everything is too crowded.");
+            }
+        }
+
+
+        if (CurrentHappiness > CommentThreshold)
+        {
+            comments.Add("I love our community! We can all have fun and stay healthy.");
+        }
+        else 
+        {
+            comments.Add("People seem so grumpy.Maybe they don't like the changes.");
+        }
+
+        if (CurrentEnvironment > CommentThreshold)
+        {
+            comments.Add("What a beautiful day! The trees are blooming and the air is clean.");
+        }
+        else 
+        {
+            comments.Add("Our trees don't look so green anymore. What should we do?");
+        }
+
+        if (CurrentBudget > CommentThreshold)
+        {
+            comments.Add("This is a great place to live! We've got lots of good ideas.");
+        }
+        else 
+        {
+            comments.Add("Our city is losing money on construction. What should we do?");
+        }
+
+
+        //pull random comment, instantiate a comment bubble, and replace text and place above a random person
+
+        if (comments.Count > 0)
+        {
+            
+
+            string randomComment = comments[Random.Range(0, comments.Count)];
+            Person[] allPersons = board.GetComponent<BoardManager>().persons;
+            Debug.Log(allPersons);
+            Person randomPerson = allPersons[Random.Range(0, persons.Length)];
+            GameObject RandomCommentModal = Instantiate(commentObject, uiCanvas);
+            Debug.Log(RandomCommentModal.gameObject.GetComponentInChildren<Text>());
+            RandomCommentModal.gameObject.GetComponentInChildren<Text>().text = randomComment;
+
+
+            IsoObject iso = randomPerson.GetComponent<IsoObject>();
+            Debug.Log(iso.position);
+            Vector2 commentLocation2D = isoWorld.IsoToScreen(iso.position);
+            //not sure why, but misregistered
+            Vector2 adjustedCommentLocation = new Vector2(commentLocation2D.x - 1920f, commentLocation2D.y - 1080f);
+
+            RandomCommentModal.gameObject.GetComponent<RectTransform>().anchoredPosition = adjustedCommentLocation;
+
+        }
+
 
     }
 

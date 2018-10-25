@@ -45,6 +45,9 @@ public class BoardManager : MonoBehaviour {
     public Person[] persons;
 
 
+
+
+
     private PromptLocation[] promptLocations;
     private List<PromptLocation> occupiedLocations = new List<PromptLocation>();
     private List<PromptLocation> promptsWaiting = new List<PromptLocation>();
