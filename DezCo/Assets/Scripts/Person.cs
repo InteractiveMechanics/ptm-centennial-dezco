@@ -78,6 +78,8 @@ public class Person : MonoBehaviour {
         personRenderer.sprite = persons[Random.Range(0, persons.Length)];
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
@@ -89,4 +91,6 @@ public class Person : MonoBehaviour {
     {
         CancelInvoke();
     }
+
+
 }

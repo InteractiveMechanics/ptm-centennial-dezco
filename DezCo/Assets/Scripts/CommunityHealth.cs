@@ -56,7 +56,7 @@ public class CommunityHealth : MonoBehaviour {
         environmentbar.value = MaxValue;
         budgetbar.value = MaxValue;
         InvokeRepeating("Sadness", 1, 1);
-        InvokeRepeating("GenerateRandomComment", 5, 1);
+        InvokeRepeating("GenerateRandomComment", 5, 5);
     }
 
     void Sadness(){
@@ -156,13 +156,11 @@ public class CommunityHealth : MonoBehaviour {
             Person[] allPersons = board.GetComponent<BoardManager>().persons;
             Debug.Log(allPersons);
             Person randomPerson = allPersons[Random.Range(0, persons.Length)];
+            IsoObject iso = randomPerson.GetComponent<IsoObject>();
             GameObject RandomCommentModal = Instantiate(commentObject, uiCanvas);
-            Debug.Log(RandomCommentModal.gameObject.GetComponentInChildren<Text>());
             RandomCommentModal.gameObject.GetComponentInChildren<Text>().text = randomComment;
 
 
-            IsoObject iso = randomPerson.GetComponent<IsoObject>();
-            Debug.Log(iso.position);
             Vector2 commentLocation2D = isoWorld.IsoToScreen(iso.position);
             //not sure why, but misregistered
             Vector2 adjustedCommentLocation = new Vector2(commentLocation2D.x - 1920f, commentLocation2D.y - 1080f);

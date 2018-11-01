@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 4629309212695584}
   - component: {fileID: 212239301946830332}
   - component: {fileID: 95251409243452536}
+  - component: {fileID: 114538227929655772}
   m_Layer: 0
   m_Name: personSprite
   m_TagString: Untagged
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1421705001409862}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -667.615, y: 1793.8596, z: 309.5}
+  m_LocalPosition: {x: -667.615, y: 1793.8596, z: 35.89974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4976252938382454}
@@ -200,6 +201,17 @@ MonoBehaviour:
   maxUpdateInterval: 30
   minUpdateInterval: 10
   happinessThreshold: 50
+--- !u!114 &114538227929655772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691370716030524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a020de5591084acbbdda557e0ec92fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114905256223013350
 MonoBehaviour:
   m_ObjectHideFlags: 1
